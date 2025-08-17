@@ -1,0 +1,342 @@
+{
+  "projects": [
+
+     {
+      "id": 6,
+      "client": "CallWisely Technologies",
+      "role": "AI Integration Developer & Backend Architect",
+      "category": "AI/Business Communications",
+      "deliverables": [
+        "AI-powered phone agent system",
+        "24/7 call handling platform",
+        "Voice recognition integration",
+        "CRM system integration",
+        "Analytics dashboard",
+        "API development"
+      ],
+      "date": "2024",
+      "websiteLink": "https://callwisely.ai",
+      "projectDescription": "CallWisely.ai ensures your business captures every opportunity with AI-powered phone agents that work 24/7, 365 days a year. No more dropped calls, no more lost revenue. The platform provides intelligent call handling, customer service automation, and seamless integration with existing business systems.",
+      "features": [
+        "24/7 AI-powered phone agents for continuous availability",
+        "Natural language processing for human-like conversations",
+        "Integration with existing CRM and business systems",
+        "Real-time call analytics and performance monitoring",
+        "Customizable AI responses based on business needs",
+        "Multi-language support for global businesses",
+        "Call routing and escalation to human agents when needed",
+        "Revenue tracking and opportunity capture metrics"
+      ],
+      "execution": "Developed CallWisely AI over 7 months as the lead AI Integration Developer, working with a team of 4 developers and 2 AI specialists. Built using Python with advanced speech recognition APIs and real-time processing capabilities. Implemented a microservices architecture to handle high call volumes and ensure 99.9% uptime. The main challenge was creating natural-sounding AI conversations that could handle complex customer inquiries, which I solved by training custom language models and implementing sophisticated context management systems.",
+      "projectResults": {
+        "description": "CallWisely AI revolutionized business communication for clients, ensuring no opportunities are missed and significantly improving customer service efficiency. The platform's 24/7 availability and intelligent call handling led to substantial revenue increases and customer satisfaction improvements.",
+        "metrics": [
+          "99.9% call availability achieved across all client businesses",
+          "300% increase in after-hours lead capture for clients",
+          "85% customer satisfaction rate with AI interactions",
+          "50,000+ calls successfully handled monthly",
+          "40% reduction in missed business opportunities",
+          "Average 25% increase in client revenue from captured calls"
+        ]
+      },
+      "projectImages": [
+        "images/new_images/callwisely.png" 
+      ]
+    },
+    {
+      "id": 7,
+      "client": "Bree AI",
+      "role": "AI Developer & Frontend Engineer",
+      "category": "AI/Career Development",
+      "deliverables": [
+        "AI-powered CV enhancement tool",
+        "Cover letter generation system",
+        "Voice coaching platform",
+        "Interview preparation system",
+        "Text coaching algorithms",
+        "User dashboard and tracking"
+      ],
+      "date": "2024",
+      "websiteLink": null,
+      "projectDescription": "Bree AI helps users craft the perfect application and land the interview. The platform instantly enhances CVs, generates tailored cover letters, and provides master-level interview preparation with AI-powered voice and text coaching, giving job seekers a competitive edge in today's market.",
+      "features": [
+        "AI-powered CV enhancement and optimization",
+        "Tailored cover letter generation for specific jobs",
+        "Voice coaching with real-time feedback and analysis",
+        "Text-based interview preparation and practice",
+        "Industry-specific application customization",
+        "ATS (Applicant Tracking System) optimization",
+        "Performance tracking and improvement suggestions",
+        "Mock interview scenarios with AI feedback"
+      ],
+      "execution": "Built Bree AI over 6 months as the primary AI Developer and Frontend Engineer, collaborating with a team of 3 developers and 1 UX designer. Used React for the frontend with Python and OpenAI API for AI capabilities. Implemented speech recognition and analysis for voice coaching features. The biggest challenge was creating accurate voice coaching algorithms that could provide meaningful feedback on interview performance, which I solved by developing custom speech analysis models combined with sentiment analysis and content evaluation systems.",
+      "projectResults": {
+        "description": "Bree AI successfully empowered job seekers to significantly improve their application materials and interview performance. The platform's AI-driven approach led to measurably better job search outcomes and increased user confidence in the application process.",
+        "metrics": [
+          "5,000+ CVs enhanced and optimized through the platform",
+          "15,000+ tailored cover letters generated for users",
+          "78% of users reported improved interview confidence",
+          "65% increase in interview callback rates for platform users",
+          "10,000+ voice coaching sessions completed",
+          "Average 40% improvement in mock interview scores"
+        ]
+      },
+      "projectImages": [
+        "images/new_images/bree.png"
+      ]
+    },
+     {
+      "id": 3,
+      "client": "Nexuscale Technologies",
+      "role": "AI Integration Developer & Backend Architect",
+      "category": "AI/SaaS Platform",
+      "deliverables": [
+        "AI-powered email platform",
+        "Machine learning models",
+        "API integrations",
+        "Analytics dashboard",
+        "Payment system",
+        "Community platform"
+      ],
+      "date": "2024",
+      "websiteLink": null,
+      "projectDescription": "Nexuscale AI is an advanced email marketing platform that leverages artificial intelligence to automate sales processes and deliver exceptional results. The platform writes result-driven emails, targets customers effectively, reveals competitor secrets, and schedules meetings, helping businesses achieve significant growth while saving valuable time.",
+      "features": [
+        "AI-powered email content generation using GPT models",
+        "Smart customer targeting and segmentation algorithms",
+        "Competitor analysis and market insights",
+        "Automated meeting scheduling integration",
+        "Real-time campaign performance analytics",
+        "Smart follow-up automation sequences",
+        "Community platform for strategy sharing and networking",
+        "Integration with major CRM and email platforms"
+      ],
+      "execution": "Served as AI Integration Developer and Backend Architect over 8 months, working with a team of 3 developers and 1 AI specialist. Built the platform using Python with OpenAI API integration and React frontend. Used ML-driven development methodology with continuous model training and optimization. The primary challenge was integrating multiple AI models while maintaining real-time performance, which we solved by implementing a microservices architecture with Redis caching and efficient queue management.",
+      "projectResults": {
+        "description": "Nexuscale AI delivered exceptional results for businesses, revolutionizing their email marketing approach and significantly boosting sales performance. The platform's AI-driven features provided measurable business growth and substantial time savings for users.",
+        "metrics": [
+          "250% average revenue increase for client businesses",
+          "8.7x improvement in email conversion rates",
+          "37 hours saved per week per user through automation",
+          "400% increase in deals closed by platform users",
+          "92% monthly user retention rate indicating high satisfaction",
+          "10,000+ AI-generated emails created daily across the platform"
+        ]
+      },
+      "projectImages": [
+        "images/new_images/nexuscale.png"
+      ]
+    },
+    { 
+      "id": 1,
+      "client": "Sema Healthcare",
+      "role": "Lead Full-Stack Developer",
+      "category": "Healthcare Technology",
+      "deliverables": [
+        "Full-stack web application",
+        "Real-time chat system",
+        "Video calling platform",
+        "User authentication system",
+        "Payment integration",
+        "Admin dashboard"
+      ],
+      "date": "2024",
+      "websiteLink": null,
+      "projectDescription": "Sema is a comprehensive platform connecting therapists and clients with integrated communication tools for mental health support. The system provides a secure environment for therapeutic sessions through real-time messaging and high-quality video conferencing capabilities.",
+      "features": [
+        "Real-time chat system for secure therapist-client communication",
+        "HD video calling functionality for remote therapy sessions",
+        "User authentication and role-based access control",
+        "Appointment scheduling and management system",
+        "Secure payment processing integration",
+        "Therapist profile and availability management",
+        "Session notes and client progress tracking",
+        "Mobile-responsive design for accessibility"
+      ],
+      "execution": "Led the development of Sema's platform over 6 months as a solo developer using Elixir and Phoenix LiveView. Implemented secure video calling with WebRTC and end-to-end encryption to ensure HIPAA compliance. Used agile methodology with weekly client sprints to iteratively build features. The main challenge was creating a reliable, secure video communication system for healthcare, which I solved by implementing robust WebRTC protocols with fallback mechanisms and comprehensive security measures.",
+      "projectResults": {
+        "description": "Sema successfully launched and gained rapid user adoption, becoming a vital platform for mental health support during the pandemic. The platform's reliability and ease of use led to strong user engagement and positive feedback from both therapists and clients.",
+        "metrics": [
+          "1,000+ active users within 3 months of launch",
+          "5,000+ therapy sessions successfully facilitated",
+          "99.9% system uptime achieved throughout operation",
+          "98% therapist satisfaction rate based on surveys",
+          "Sub-200ms average chat response time",
+          "Enabled 24/7 mental health support during COVID-19 crisis"
+        ]
+    },
+    "projectImages": [
+        "images/new_images/sema.png"
+    ]
+},
+    {
+      "id": 8,
+      "client": "Mwamba Rugby Football Club",
+      "role": "Full-Stack Developer & CMS Architect",
+      "category": "Sports/E-commerce",
+      "deliverables": [
+        "E-commerce website with ticketing",
+        "Merchandise store platform",
+        "Membership management system",
+        "Content management system",
+        "Payment processing integration",
+        "Admin dashboard"
+      ],
+      "date": "2023",
+      "websiteLink": null,
+      "projectDescription": "Mwamba RFC System is a comprehensive website that allows rugby fans to buy tickets to games, purchase official merchandise, and pay for club memberships. The platform includes a robust content management system that enables administrators to manage all website content, ensuring fresh and engaging fan experiences.",
+      "features": [
+        "Online ticket purchasing system for rugby matches",
+        "Full e-commerce store for official merchandise",
+        "Membership registration and payment processing",
+        "Content management system for dynamic content updates",
+        "Fan engagement features and news sections",
+        "Event calendar and fixture management",
+        "Secure payment processing with multiple payment options",
+        "Mobile-responsive design for fan accessibility"
+      ],
+      "execution": "Developed the Mwamba RFC system over 4 months as a solo full-stack developer using Ruby on Rails and React. Implemented a comprehensive e-commerce solution with Stripe payment integration and built a custom CMS for easy content management. The main challenge was creating a seamless ticketing system that could handle high-demand match tickets while preventing overselling, which I solved by implementing real-time inventory management with secure seat allocation and queue management systems.",
+      "projectResults": {
+        "description": "The Mwamba RFC website successfully digitized the club's operations, providing fans with easy access to tickets, merchandise, and membership services. The platform significantly improved fan engagement and created new revenue streams for the rugby club.",
+        "metrics": [
+          "2,500+ match tickets sold through the platform",
+          "500+ merchandise items sold in the first 6 months",
+          "300+ new memberships processed online",
+          "95% customer satisfaction rate for online purchases",
+          "60% increase in fan engagement through digital platform",
+          "40% reduction in administrative workload for club staff"
+        ]
+      },
+      "projectImages": [
+        "images/new_images/kabeberi.png"
+      ]
+     
+    },
+    {
+      "id": 2,
+      "client": "Raila Odinga Campaign Team",
+      "role": "Frontend Developer & Technical Consultant",
+      "category": "Political Campaign",
+      "deliverables": [
+        "Campaign website",
+        "Content management system",
+        "Multi-language support",
+        "Social media integration",
+        "Analytics dashboard",
+        "Mobile optimization"
+      ],
+      "date": "2024",
+      "websiteLink": "https://www.railaodinga4auc.com",
+      "projectDescription": "Official campaign platform supporting Raila Odinga's bid to become the Chairperson of the African Union Commission (AUC). The website serves as a central hub for disseminating campaign information, engaging with supporters, and showcasing Odinga's vision and policies for the African Union across all 54 African countries.",
+      "features": [
+        "Multi-language support for pan-African reach",
+        "Interactive policy showcase and vision presentation",
+        "Supporter engagement and newsletter system",
+        "Media center with press releases and updates",
+        "Social media integration and sharing tools",
+        "Mobile-responsive design for accessibility",
+        "SEO optimization for maximum reach",
+        "Real-time content updates and news feeds"
+      ],
+      "execution": "Developed the campaign website in 3 months working with a small team of 2 developers. Built with React and Next.js for optimal performance and SEO. Used rapid deployment methodology with daily updates during the active campaign period. The main challenge was supporting multiple African languages and handling high traffic loads during peak campaign moments, which we solved by implementing efficient CDN distribution and caching strategies.",
+      "projectResults": {
+        "description": "The campaign website achieved exceptional reach across the African continent, serving as the primary digital hub for Raila Odinga's AUC campaign. The platform successfully engaged supporters and disseminated campaign information to a pan-African audience.",
+        "metrics": [
+          "500,000+ unique visitors during the campaign period",
+          "Accessed from all 54 African countries",
+          "Average 4-minute session duration showing high engagement",
+          "50,000+ social media shares and viral content",
+          "95+ Google PageSpeed score for optimal performance",
+          "Served as central digital platform for continental campaign"
+        ]
+      },
+      "projectImages": [
+        "images/new_images/raila.png"
+      ]
+    },
+    {
+      "id": 4,
+      "client": "PickleSchedule Sports Tech",
+      "role": "Full-Stack Developer & AI Implementation",
+      "category": "Sports Technology",
+      "deliverables": [
+        "AI scheduling system",
+        "SMS integration platform",
+        "Player matching algorithm",
+        "Court management system",
+        "Weather integration",
+        "Analytics dashboard"
+      ],
+      "date": "2024",
+      "websiteLink": null,
+      "projectDescription": "PickleSchedule AI is a revolutionary pickleball scheduling platform that eliminates the complexity of traditional sports apps. Players simply text their availability and preferences, and the AI handles all coordination, matching, and scheduling automatically. No stress, no apps - just text and play.",
+      "features": [
+        "SMS-based scheduling interface for easy access",
+        "AI-powered player matching based on skill and availability",
+        "Automatic court availability checking and booking",
+        "Weather integration for outdoor game planning",
+        "Player skill level assessment and matching",
+        "Automated reminder and notification system",
+        "Game history and statistics tracking",
+        "Community building and player networking"
+      ],
+      "execution": "Developed PickleSchedule AI as a solo developer over 4 months using Elixir and Phoenix with Twilio and OpenAI API integrations. Employed user-centered design methodology with continuous player feedback to refine the SMS interface. The main challenge was implementing natural language processing for SMS commands in a sports context, which I solved by training custom AI models specifically for sports-related language understanding and scheduling terminology.",
+      "projectResults": {
+        "description": "PickleSchedule AI successfully simplified pickleball coordination, creating a thriving community of players who appreciate the effortless scheduling system. The platform's AI-driven approach eliminated traditional app complexity and significantly improved game organization efficiency.",
+        "metrics": [
+          "2,000+ games successfully scheduled and coordinated",
+          "500+ active players registered and engaged",
+          "98% user satisfaction score based on feedback surveys",
+          "80% reduction in time spent on game coordination",
+          "5 new pickleball communities formed through the platform",
+          "Average 3 games scheduled per user per week showing high engagement"
+        ]
+      },
+      "projectImages": [
+        "images/new_images/pickleschedule.png"
+      ]
+    },
+    {
+      "id": 5,
+      "client": "FoodPlan Solutions",
+      "role": "Full-Stack Web Developer",
+      "category": "Lifestyle/Health Technology",
+      "deliverables": [
+        "Meal planning web application",
+        "Recipe management system",
+        "Shopping list generator",
+        "Nutrition tracking",
+        "User dashboard",
+        "Mobile optimization"
+      ],
+      "date": "2023",
+      "websiteLink": null,
+      "projectDescription": "A comprehensive meal planning system that helps users organize their weekly meals efficiently. The application allows users to plan meals for the week, manage their recipe collection, and automatically generate smart shopping lists based on their meal plans, making healthy eating more accessible and organized.",
+      "features": [
+        "Interactive weekly meal planning calendar",
+        "Comprehensive recipe management and storage",
+        "Automatic shopping list generation from meal plans",
+        "Ingredient inventory tracking and management",
+        "Nutritional information display and analysis",
+        "Meal preparation time estimation",
+        "Dietary restriction and preference filtering",
+        "Family meal planning with portion scaling"
+      ],
+      "execution": "Built the meal planning system over 5 months working with a team of 2 developers using React and Ruby on Rails. Applied feature-driven development methodology with regular user testing sessions to ensure usability. The primary technical challenge was developing complex recipe-to-shopping-list algorithms that could intelligently consolidate ingredients and handle measurement conversions, which I solved by creating a smart ingredient consolidation system with automated measurement conversion capabilities.",
+      "projectResults": {
+        "description": "The meal planning system successfully helped users organize their eating habits and reduce food waste while saving significant time on meal preparation. The platform's smart features led to improved user health outcomes and cost savings.",
+        "metrics": [
+          "10,000+ meals successfully planned by platform users",
+          "5,000+ recipes stored and shared in the community database",
+          "Average 2 hours saved per week per user on meal planning",
+          "85% weekly active user rate showing strong engagement",
+          "40% improvement in meal consistency reported by users",
+          "25% average reduction in food waste and grocery costs"
+        ]
+      },
+      "projectImages": [
+        "images/new_images/sistes.png"
+      ]
+    }
+  ]
+}
