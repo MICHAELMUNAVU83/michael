@@ -185,6 +185,215 @@
         }
       }
     </style>
+    <script>
+      // Function to load and display projects
+      async function loadProjects() {
+        try {
+          // Fetch the JSON file
+          const response = await fetch("./projects.json");
+
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+
+          const data = await response.json();
+
+          // Get the container
+          const container = document.getElementById("projects-container");
+
+          // Clear loading message
+          container.innerHTML = "";
+
+          // Loop through projects and create HTML for each
+          data.projects.forEach((project) => {
+            const projectCard = createProjectCard(project);
+            container.appendChild(projectCard);
+          });
+
+          // Show the container with animation
+          const section = document.querySelector(
+            '[data-w-id="61bb4c9d-3c6c-962a-127d-499ae220c37f"]'
+          );
+          section.style.opacity = "1";
+        } catch (error) {
+          console.error("Error loading projects:", error);
+          const container = document.getElementById("projects-container");
+          container.innerHTML =
+            '<div class="error-message">Unable to load projects. Please try again later.</div>';
+        }
+      }
+
+      // Function to create a project card element
+      function createProjectCard(project) {
+        // Create the main wrapper div
+        const cardWrapper = document.createElement("div");
+        cardWrapper.setAttribute("role", "listitem");
+        cardWrapper.className = "card-wrapper w-dyn-item";
+
+        // Create the project card HTML
+        cardWrapper.innerHTML = `
+        <a
+            data-w-id="e680f3c8-76f6-2695-e1cf-4390e04361eb"
+            href="/project/${project.id}"
+            class="card project-card-v1 w-inline-block"
+        >
+            <div class="card-project-v1---content-wrapper">
+                <div class="card-project-v1---left-contet">
+                    <div>
+                        <h3 class="display-7 mid">${escapeHtml(
+                          project.title
+                        )}</h3>
+                        <div class="mg-top-extra-small">
+                            <div class="display-3">${escapeHtml(
+                              project.date
+                            )}</div>
+                        </div>
+                    </div>
+                    <div class="inner-container _380px">
+                        <p>${escapeHtml(
+                          truncateText(project.projectDescription, 150)
+                        )}</p>
+                        <div class="mg-top-medium mg-top-32px---mbl">
+                            <div class="link hover-none mid">
+                                <div class="item-icon-left">
+                                    <div class="icon-font-rounded"></div>
+                                </div>
+                                <div>View project</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    id="w-node-f19a12e4-2c5e-51a5-a69c-d9d664ee11a6-082639e3"
+                    class="image-wrapper border-radius-image-default project-card-v1-image-wrapper"
+                >
+                    <img
+                        src="${
+                          project.projectImages && project.projectImages[0]
+                            ? project.projectImages[0]
+                            : ""
+                        }"
+                        loading="eager"
+                        alt="${escapeHtml(project.title)}"
+                        class="image cover-image project-card-v1-image"
+                        onerror="this.src=""
+                    />
+                </div>
+            </div>
+            <div style="opacity: 0" class="card-project-v1---bg"></div>
+            <div style="opacity: 0" class="card-project-v1---arrow-wrapper">
+                <div class="card-arrow">
+                    <div class="icon-font-rounded"></div>
+                </div>
+            </div>
+        </a>
+    `;
+
+        return cardWrapper;
+      }
+
+      // Helper function to escape HTML to prevent XSS
+      function escapeHtml(text) {
+        const div = document.createElement("div");
+        div.textContent = text;
+        return div.innerHTML;
+      }
+
+      // Helper function to truncate text
+      function truncateText(text, maxLength) {
+        if (text.length <= maxLength) return text;
+        return text.substring(0, maxLength).trim() + "...";
+      }
+
+      // Optional: Filter projects by category
+      function filterProjects(category = "all") {
+        fetch("./projects.json")
+          .then((response) => response.json())
+          .then((data) => {
+            let filteredProjects = data.projects;
+
+            if (category !== "all") {
+              filteredProjects = data.projects.filter((project) =>
+                project.category.toLowerCase().includes(category.toLowerCase())
+              );
+            }
+
+            const container = document.getElementById("projects-container");
+            container.innerHTML = "";
+
+            filteredProjects.forEach((project) => {
+              const projectCard = createProjectCard(project);
+              container.appendChild(projectCard);
+            });
+          });
+      }
+
+      // Optional: Limit number of projects shown
+      function loadFeaturedProjects(limit = 6) {
+        fetch("./projects.json")
+          .then((response) => response.json())
+          .then((data) => {
+            const featuredProjects = data.projects.slice(0, limit);
+
+            const container = document.getElementById("projects-container");
+            container.innerHTML = "";
+
+            featuredProjects.forEach((project) => {
+              const projectCard = createProjectCard(project);
+              container.appendChild(projectCard);
+            });
+
+            const section = document.querySelector(
+              '[data-w-id="61bb4c9d-3c6c-962a-127d-499ae220c37f"]'
+            );
+            section.style.opacity = "1";
+          });
+      }
+
+      // Load projects when the page loads
+      document.addEventListener("DOMContentLoaded", function () {
+        loadProjects();
+
+        // Optional: Add filter buttons
+        // filterProjects('AI/SaaS'); // Show only AI projects
+        // loadFeaturedProjects(4); // Show only first 4 projects
+      });
+
+      // Optional: Add search functionality
+      function searchProjects(searchTerm) {
+        fetch("./projects.json")
+          .then((response) => response.json())
+          .then((data) => {
+            const filteredProjects = data.projects.filter(
+              (project) =>
+                project.title
+                  .toLowerCase()
+                  .includes(searchTerm.toLowerCase()) ||
+                project.projectDescription
+                  .toLowerCase()
+                  .includes(searchTerm.toLowerCase()) ||
+                project.category
+                  .toLowerCase()
+                  .includes(searchTerm.toLowerCase())
+            );
+
+            const container = document.getElementById("projects-container");
+            container.innerHTML = "";
+
+            if (filteredProjects.length === 0) {
+              container.innerHTML =
+                '<div class="no-results">No projects found matching your search.</div>';
+              return;
+            }
+
+            filteredProjects.forEach((project) => {
+              const projectCard = createProjectCard(project);
+              container.appendChild(projectCard);
+            });
+          });
+      }
+    </script>
+
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link
       href="https://fonts.gstatic.com"
@@ -826,7 +1035,7 @@
                 <div class="hero-marquee">
                   <div class="caruosel-image-wrapper">
                     <img
-                      src="images/66c60cb6071796664dee59c2_image-1-projects-portfolix-x-webflow-template.png"
+                      src="images/new_images/sistes.png"
                       loading="eager"
                       alt="Techbeta X Project - Portfolix X Webflow Template"
                       class="image cover-image grow"
@@ -834,7 +1043,7 @@
                   </div>
                   <div class="caruosel-image-wrapper">
                     <img
-                      src="images/66c60cb4bc671ea85da44dca_image-2-projects-portfolix-x-webflow-template.png"
+                      src="images/new_images/callwisely.png"
                       loading="eager"
                       alt="Invstor X Project - Portfolix X Webflow Template"
                       class="image cover-image grow"
@@ -842,7 +1051,7 @@
                   </div>
                   <div class="caruosel-image-wrapper">
                     <img
-                      src="images/66c60cb5c653aad5b4cb3e72_image-3-projects-portfolix-x-webflow-template.png"
+                      src="images/new_images/bree.png"
                       loading="eager"
                       alt="Bnkify X Project - Portfolix X Webflow Template"
                       class="image cover-image grow"
@@ -850,7 +1059,7 @@
                   </div>
                   <div class="caruosel-image-wrapper">
                     <img
-                      src="images/66c60cb4d11e161a67082e0c_image-4-projects-portfolix-x-webflow-template.png"
+                      src="images/new_images/nexuscale.png"
                       loading="eager"
                       alt="Creativflow X Project - Portfolix X Webflow Template"
                       class="image cover-image grow"
@@ -858,7 +1067,7 @@
                   </div>
                   <div class="caruosel-image-wrapper">
                     <img
-                      src="images/66c60cb4d31b284182f1a4c9_image-5-projects-portfolix-x-webflow-template.png"
+                      src="images/new_images/sema.png"
                       loading="eager"
                       alt="Advertising X Project - Portfolix X Webflow Template"
                       class="image cover-image grow"
@@ -866,7 +1075,7 @@
                   </div>
                   <div class="caruosel-image-wrapper">
                     <img
-                      src="images/66c60cb4834c64992663f2b1_image-6-projects-portfolix-x-webflow-template.png"
+                      src="images/new_images/pickleschedule.png"
                       loading="eager"
                       alt="Cryptotech X Project - Portfolix X Webflow Template"
                       class="image cover-image grow"
@@ -874,7 +1083,7 @@
                   </div>
                   <div class="caruosel-image-wrapper">
                     <img
-                      src="images/66c60cb4d9e6b3aa76f1c01e_image-7-projects-portfolix-x-webflow-template.png"
+                      src="images/new_images/kabeberi.png"
                       loading="eager"
                       alt="Editortech X Project - Portfolix X Webflow Template"
                       class="image cover-image grow"
@@ -1131,165 +1340,13 @@
             style="opacity: 0"
             class="mg-top-section"
           >
-            <div class="w-dyn-list">
-              <div role="list" class="cards-container w-dyn-items">
-                <div role="listitem" class="card-wrapper w-dyn-item">
-                  <a
-                    data-w-id="e680f3c8-76f6-2695-e1cf-4390e04361eb"
-                    href="/project/invstor-x"
-                    class="card project-card-v1 w-inline-block"
-                    ><div class="card-project-v1---content-wrapper">
-                      <div class="card-project-v1---left-contet">
-                        <div>
-                          <h3 class="display-7 mid">Invstor X</h3>
-                          <div class="mg-top-extra-small">
-                            <div class="display-3">Q4 2025</div>
-                          </div>
-                        </div>
-                        <div class="inner-container _380px">
-                          <p>
-                            Etiam libero lacus rhoncus gravida a arcu dui hac
-                            enim quisque faucibus tincidunt ipsum id laoreet
-                            ultrices mauris facilisis ut curabitur.
-                          </p>
-                          <div class="mg-top-medium mg-top-32px---mbl">
-                            <div class="link hover-none mid">
-                              <div class="item-icon-left">
-                                <div class="icon-font-rounded"></div>
-                              </div>
-                              <div>View project</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        id="w-node-f19a12e4-2c5e-51a5-a69c-d9d664ee11a6-082639e3"
-                        class="image-wrapper border-radius-image-default project-card-v1-image-wrapper"
-                      >
-                        <img
-                          src="images/667ee0a47076a086256393fc_invstor-x-thumbnail-image-v1-portfolix-x-webflow-template.jpg"
-                          loading="eager"
-                          alt="Invstor X"
-                          class="image cover-image project-card-v1-image"
-                        />
-                      </div>
-                    </div>
-                    <div style="opacity: 0" class="card-project-v1---bg"></div>
-                    <div
-                      style="opacity: 0"
-                      class="card-project-v1---arrow-wrapper"
-                    >
-                      <div class="card-arrow">
-                        <div class="icon-font-rounded"></div>
-                      </div>
-                    </div></a
-                  >
-                </div>
-                <div role="listitem" class="card-wrapper w-dyn-item">
-                  <a
-                    data-w-id="e680f3c8-76f6-2695-e1cf-4390e04361eb"
-                    href="/project/creativflow-x"
-                    class="card project-card-v1 w-inline-block"
-                    ><div class="card-project-v1---content-wrapper">
-                      <div class="card-project-v1---left-contet">
-                        <div>
-                          <h3 class="display-7 mid">Creativflow X</h3>
-                          <div class="mg-top-extra-small">
-                            <div class="display-3">Q3 2025</div>
-                          </div>
-                        </div>
-                        <div class="inner-container _380px">
-                          <p>
-                            Aliquet turpis dictumst malesuada viverra quis
-                            elementum sit ipsum ultrices diam urna ut id vivamus
-                            quis sed blandit urna purus.
-                          </p>
-                          <div class="mg-top-medium mg-top-32px---mbl">
-                            <div class="link hover-none mid">
-                              <div class="item-icon-left">
-                                <div class="icon-font-rounded"></div>
-                              </div>
-                              <div>View project</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        id="w-node-f19a12e4-2c5e-51a5-a69c-d9d664ee11a6-082639e3"
-                        class="image-wrapper border-radius-image-default project-card-v1-image-wrapper"
-                      >
-                        <img
-                          src="images/667ee07cf56aee568c744c3b_creativeflow-x-thumbnail-image-v1-portfolix-x-webflow-template.jpg"
-                          loading="eager"
-                          alt="Creativflow X"
-                          class="image cover-image project-card-v1-image"
-                        />
-                      </div>
-                    </div>
-                    <div style="opacity: 0" class="card-project-v1---bg"></div>
-                    <div
-                      style="opacity: 0"
-                      class="card-project-v1---arrow-wrapper"
-                    >
-                      <div class="card-arrow">
-                        <div class="icon-font-rounded"></div>
-                      </div>
-                    </div></a
-                  >
-                </div>
-                <div role="listitem" class="card-wrapper w-dyn-item">
-                  <a
-                    data-w-id="e680f3c8-76f6-2695-e1cf-4390e04361eb"
-                    href="/project/bnkify-x"
-                    class="card project-card-v1 w-inline-block"
-                    ><div class="card-project-v1---content-wrapper">
-                      <div class="card-project-v1---left-contet">
-                        <div>
-                          <h3 class="display-7 mid">Bnkify X</h3>
-                          <div class="mg-top-extra-small">
-                            <div class="display-3">Q2 2025</div>
-                          </div>
-                        </div>
-                        <div class="inner-container _380px">
-                          <p>
-                            Nunc egestas pharetra volutpat sit faucibus interdum
-                            morbi aliquet dis malesuada auctor et sit mauris leo
-                            non et blandit id aliquam et.
-                          </p>
-                          <div class="mg-top-medium mg-top-32px---mbl">
-                            <div class="link hover-none mid">
-                              <div class="item-icon-left">
-                                <div class="icon-font-rounded"></div>
-                              </div>
-                              <div>View project</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        id="w-node-f19a12e4-2c5e-51a5-a69c-d9d664ee11a6-082639e3"
-                        class="image-wrapper border-radius-image-default project-card-v1-image-wrapper"
-                      >
-                        <img
-                          src="images/667ee05a445157963c75eedf_bnkify-x-thumbnail-image-v1-portfolix-x-webflow-template.jpg"
-                          loading="eager"
-                          alt="Bnkify X"
-                          class="image cover-image project-card-v1-image"
-                        />
-                      </div>
-                    </div>
-                    <div style="opacity: 0" class="card-project-v1---bg"></div>
-                    <div
-                      style="opacity: 0"
-                      class="card-project-v1---arrow-wrapper"
-                    >
-                      <div class="card-arrow">
-                        <div class="icon-font-rounded"></div>
-                      </div>
-                    </div></a
-                  >
-                </div>
-              </div>
+            <div
+              role="list"
+              class="cards-container w-dyn-items"
+              id="projects-container"
+            >
+              <!-- Loading state -->
+              <div class="loading-message">Loading projects...</div>
             </div>
           </div>
         </div>
