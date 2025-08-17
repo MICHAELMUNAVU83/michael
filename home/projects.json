@@ -127,7 +127,7 @@
         "images/new_images/nexuscale.png"
       ]
     },
-        {
+    { 
       "id": 1,
       "client": "Sema Healthcare",
       "role": "Lead Full-Stack Developer",
@@ -254,7 +254,6 @@
         "images/new_images/raila.png"
       ]
     },
-   
     {
       "id": 4,
       "client": "PickleSchedule Sports Tech",
