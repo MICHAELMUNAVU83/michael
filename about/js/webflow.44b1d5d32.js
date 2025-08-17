@@ -24697,21 +24697,7 @@ __p+='`),
             !!r.webkitFullscreenElement;
           e(u).attr("style", h ? "display: none !important;" : "");
         }
-        function f() {
-          var h = e('<a class="w-webflow-badge"></a>').attr(
-              "href",
-              "https://webflow.com?utm_campaign=brandjs"
-            ),
-            m = e("<img>")
-              .attr(
-                "src",
-                "https://d3e54v103j8qbb.cloudfront.net/img/webflow-badge-icon-d2.89e12c322e.svg"
-              )
-              .attr("alt", "")
-              .css({ marginRight: "4px", width: "26px" })
-           
-          return h.append(m), h[0];
-        }
+        function f() {}
         function d() {
           var h = i.children(a),
             m = h.length && h.get(0) === u,
