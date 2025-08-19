@@ -16,6 +16,20 @@
       content="Michael Munavu is a full-stack developer with 4+ years experience specializing in Elixir, Phoenix LiveView, and React JS. 12x hackathon winner offering web development and tech consulting services."
       name="description"
     />
+
+    <script>
+      (function () {
+        const script = document.createElement("script");
+        script.src = "http://localhost:4000/embed/chatbot.js";
+        script.setAttribute("data-product-id", "3");
+        script.setAttribute(
+          "data-api-key",
+          "cb_815a6c129812ea94ecab60a1fb10fbff"
+        );
+        script.setAttribute("data-api-base", "http://localhost:4000");
+        document.head.appendChild(script);
+      })();
+    </script>
     <meta
       name="keywords"
       content="Michael Munavu, full-stack developer, Elixir developer, Phoenix LiveView, React JS, web development, Kenya developer, hackathon winner, tech consulting"
@@ -2015,80 +2029,7 @@
         </div>
       </footer>
     </div>
-    <div>
-      <div
-        data-w-id="65b4f744-8d31-d50a-49f4-a29fe183edd2"
-        class="brix-badges-wrapper"
-      >
-        <div
-          class="more-templates-lottie-2"
-          data-w-id="65b4f744-8d31-d50a-49f4-a29fe183edd3"
-          data-animation-type="lottie"
-          data-src="https://cdn.prod.website-files.com/5e30f06b05f79621331ddc25/65dcea068e8dfd14eaed7b6f_Notification%20Dot.json"
-          data-loop="1"
-          data-direction="1"
-          data-autoplay="1"
-          data-is-ix2-target="0"
-          data-renderer="svg"
-          data-default-duration="2.5"
-          data-duration="0"
-        ></div>
 
-        <div class="hidden-code w-embed w-script">
-          <style>
-            .more-templates-badge-wrapper {
-              transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-            }
-
-            .more-templates-badge-wrapper.active {
-              opacity: 1;
-              transform: translateY(0) scale(1);
-              z-index: 9991;
-            }
-
-            .more-templates-badge-wrapper.next {
-              opacity: 0.4;
-              transform: translateY(11px) scale(0.9);
-              z-index: 9990;
-            }
-            .more-templates-badge-wrapper.active:hover {
-              transform: translateY(-3px) scale(1.02) translateX(-3px)
-                rotate(1deg);
-            }
-          </style>
-
-          <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              const cards = document.querySelectorAll(
-                ".more-templates-badge-wrapper"
-              );
-              let currentIndex = 0;
-              const ANIMATION_INTERVAL = 8000; // 8 seconds
-
-              function updateCards() {
-                cards.forEach((card, index) => {
-                  card.classList.remove("active", "next");
-
-                  if (index === currentIndex) {
-                    card.classList.add("active");
-                  } else if (index === (currentIndex + 1) % cards.length) {
-                    card.classList.add("next");
-                  }
-                });
-
-                currentIndex = (currentIndex + 1) % cards.length;
-              }
-
-              // Initial state
-              updateCards();
-
-              // Start the loop
-              setInterval(updateCards, ANIMATION_INTERVAL);
-            });
-          </script>
-        </div>
-      </div>
-    </div>
     <script
       src="js/jquery-3.5.1.min.dc5e7f18c8.js"
       type="text/javascript"
