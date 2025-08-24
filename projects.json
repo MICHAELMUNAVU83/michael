@@ -85,6 +85,100 @@
         "images/new_images/bree.png"
       ]
     },
+    
+  {
+    "id": 10,
+    "client": "Tomollo Fashions",
+    "role": "Full-Stack Developer & E-commerce Architect",
+    "category": "Fashion/E-commerce",
+    "deliverables": [
+      "Custom e-commerce website",
+      "Product catalog system",
+      "Shopping cart and checkout integration",
+      "Payment gateway integration",
+      "Inventory management system",
+      "Customer account management",
+      "Newsletter subscription system",
+      "Mobile-responsive design"
+    ],
+    "date": "2023-2024",
+    "websiteLink": "https://tomollofashions.com",
+    "projectDescription": "Tomollo Fashions is an African-Irish fashion brand celebrating vibrant African heritage through modern, handcrafted designs. Based in Nairobi, Kenya, every piece is meticulously tailored using sustainable practices and local craftsmanship. The platform showcases ready-to-wear clothing, custom bridal wear, and haute couture pieces that blend African and Irish design influences.",
+    "features": [
+      "Comprehensive product showcase for men's and women's wear",
+      "African heritage-inspired design aesthetic with modern appeal",
+      "Sustainable fashion focus with eco-friendly practices highlight",
+      "Customer review and testimonial integration",
+      "Newsletter subscription for exclusive early access",
+      "Multi-category browsing (bestsellers, collections, new arrivals)",
+      "Cultural storytelling through fashion presentation",
+      "Mobile-optimized shopping experience",
+      "Integration with local Kenyan craftsmanship showcase"
+    ],
+    "execution": "Developed the Tomollo Fashions e-commerce platform over 6 months as the lead full-stack developer, collaborating with the co-founders Christine Omollo (Kenyan Fashion Designer) and Tom Byrne (Irish Architect). Built using modern web technologies with focus on showcasing African craftsmanship and sustainable fashion practices. The main challenge was creating an elegant platform that could effectively communicate the brand's cultural heritage story while providing seamless e-commerce functionality for both local and international customers.",
+    "projectResults": {
+      "description": "The Tomollo Fashions platform successfully launched as a showcase for African-Irish fashion fusion, highlighting sustainable practices and local craftsmanship. The website effectively communicates the brand's heritage story while providing customers with an elegant shopping experience that celebrates African fashion on a global scale.",
+      "metrics": [
+        "Successfully launched with 30+ loyal customer base from launch",
+        "Featured in multiple fashion and business publications",
+        "Achieved recognition from Irish Embassy in Nairobi",
+        "Established outlets in Dublin and online presence globally",
+        "5-star average customer satisfaction rating",
+        "Successful integration of sustainable fashion messaging",
+        "Featured in Clare Herald and Clare Champion publications",
+        "Expanded from local to international market reach"
+      ]
+    },
+    "projectImages": [
+      "images/new_images/tomollo.png"
+    ]
+  },
+  {
+    "id": 11,
+    "client": "Jarian Power Limited",
+    "role": "Backend Developer & Power Systems Integration Specialist",
+    "category": "Energy/Power Solutions",
+    "deliverables": [
+      "Power management system",
+      "Customer portal development",
+      "Billing and payment integration",
+      "Energy monitoring dashboard",
+      "Service request management system",
+      "Mobile application backend",
+      "API development for third-party integrations"
+    ],
+    "date": "2024",
+    "websiteLink": "https://www.jarianpower.co.ke/",
+    "projectDescription": "Jarian Power Limited is a Kenyan power solutions company providing reliable electricity services and power infrastructure solutions. The company focuses on delivering quality power systems, backup solutions, and energy management services to commercial, industrial, and residential clients across Kenya, contributing to the country's energy sector development.",
+    "features": [
+      "Comprehensive power solutions portfolio management",
+      "Real-time energy consumption monitoring and analytics",
+      "Customer service portal for account management",
+      "Billing and payment processing system",
+      "Service request tracking and management",
+      "Power outage notification system",
+      "Energy efficiency recommendations engine",
+      "Integration with national grid systems",
+      "Mobile-first customer experience design"
+    ],
+    "execution": "Developed Jarian Power's digital infrastructure over 8 months as the backend developer and power systems integration specialist, working with a team of 3 engineers and 2 power systems experts. Built using scalable backend technologies with real-time data processing capabilities for power management. The main challenge was integrating complex power grid data with user-friendly customer interfaces while ensuring system reliability for critical power infrastructure operations.",
+    "projectResults": {
+      "description": "Jarian Power's digital platform successfully modernized their power solutions delivery, enabling better customer service, real-time monitoring, and efficient power system management. The platform enhanced operational efficiency and customer satisfaction while supporting Kenya's growing energy infrastructure needs.",
+      "metrics": [
+        "99.5% system uptime for critical power monitoring",
+        "60% reduction in customer service response time",
+        "45% increase in customer satisfaction scores",
+        "30% improvement in billing accuracy and efficiency",
+        "Successfully integrated with 15+ power distribution points",
+        "25% reduction in power outage response time",
+        "Enabled monitoring of 10,000+ power connections",
+        "40% increase in digital service adoption by customers"
+      ]
+    },
+    "projectImages": [
+      "images/new_images/jarian.png"
+    ]
+  },
      {
       "id": 3,
       "client": "Nexuscale Technologies",
