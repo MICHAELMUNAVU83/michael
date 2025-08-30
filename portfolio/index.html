@@ -113,6 +113,19 @@
       rel="preconnect"
       crossorigin="anonymous"
     />
+    <script>
+      (function () {
+        const script = document.createElement("script");
+        script.src = "https://www.app.callwisely.ai/embed/chatbot.js";
+        script.setAttribute("data-product-id", "3");
+        script.setAttribute(
+          "data-api-key",
+          "cb_efbaaf046dfd0e7cd09cbdbadca7c620"
+        );
+        script.setAttribute("data-api-base", "https://www.app.callwisely.ai");
+        document.head.appendChild(script);
+      })();
+    </script>
     <script src="js/webfont.js" type="text/javascript"></script>
     <script type="text/javascript">
       WebFont.load({ google: { families: ["Inter:regular,500,700"] } });
