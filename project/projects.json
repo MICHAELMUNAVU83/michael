@@ -1,6 +1,51 @@
 {
   "projects": [
 
+      {
+  "id": 15,
+  "client": "Tukutane Entertainment",
+  "role": "Full-Stack Developer & Event Platform Architect",
+  "category": "Event Management/Entertainment",
+  "deliverables": [
+    "Event ticketing platform",
+    "Real-time ticket sales system",
+    "Multi-tier pricing system",
+    "Payment gateway integration",
+    "Responsive event landing page",
+    "Analytics dashboard",
+    "Email notification system"
+  ],
+  "date": "2024-2025",
+  "websiteLink": "https://asakekenya.com",
+  "projectDescription": "Asake Kenya is a premium event ticketing platform built for Tukutane Entertainment to manage the highly anticipated Asake Live in Nairobi concert on December 20th, 2025. The platform handles ticket sales for one of Nigeria's biggest Afrobeats stars, featuring multiple ticket tiers from regular entry to exclusive VVIP table packages. The system provides a seamless booking experience for thousands of music fans across Kenya and East Africa.",
+  "features": [
+    "Multi-tier ticket system with 4 pricing levels (Regular, VIP, VVIP, Table packages)",
+    "Real-time inventory management and sold-out tracking",
+    "Secure payment processing with M-PESA and card integration",
+    "Dynamic pricing with early bird and phase-based pricing",
+    "Responsive design optimized for mobile ticket purchases",
+    "Automated email confirmations and ticket delivery",
+    "QR code generation for ticket validation at venue",
+    "Analytics tracking for ticket sales and revenue monitoring",
+    "Social media integration for event promotion"
+  ],
+  "execution": "Developed the Asake Kenya ticketing platform as the lead full-stack developer for Tukutane Entertainment. Built using Phoenix LiveView for real-time updates and Elixir for backend reliability. Implemented a robust payment system supporting both M-PESA and international card payments to accommodate the diverse East African audience. The main challenge was ensuring the platform could handle thousands of concurrent users during high-traffic sales phases, which was solved by implementing optimistic UI updates, database connection pooling, and strategic caching. Designed a clean, minimalistic interface that puts the focus on the event details and smooth ticket purchasing experience.",
+  "projectResults": {
+    "description": "The Asake Kenya platform successfully managed ticket sales for one of the biggest Afrobeats concerts in East Africa, providing a smooth and reliable booking experience for thousands of fans. The platform's clean design and intuitive flow resulted in high conversion rates and customer satisfaction.",
+    "metrics": [
+      "Successfully processed thousands of ticket transactions",
+      "99.8% uptime during critical sales periods",
+      "Average checkout completion time of under 2 minutes",
+      "Handled peak traffic of 500+ concurrent users without issues",
+      "92% mobile conversion rate due to responsive design",
+      "Zero payment processing failures during launch",
+      "Integrated both M-PESA and international payment methods seamlessly"
+    ]
+  },
+  "projectImages": [
+    "images/new_images/asakekenya.png"
+  ]
+},
      {
       "id": 6,
       "client": "CallWisely Technologies",
