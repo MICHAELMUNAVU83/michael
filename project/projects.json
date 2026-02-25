@@ -1,5 +1,59 @@
 {
   "projects": [
+    {
+      "id": 16,
+      "client": "Kulola's Closet",
+      "role": "Full-Stack Developer & E-Commerce Architect",
+      "category": "Fashion E-Commerce / Retail",
+      "deliverables": [
+        "Full e-commerce storefront",
+        "Product catalogue & collections management",
+        "Shopping cart & checkout system",
+        "M-PESA & card payment integration",
+        "Admin dashboard & order management",
+        "Promo code & influencer tracking system",
+        "Bundle & upsell system",
+        "Customer-facing info pages",
+        "Responsive mobile-first design"
+      ],
+      "date": "2025-2026",
+      "websiteLink": "https://kulolascloset.com",
+      "projectDescription": "Kulola's Closet is a premium Kenyan fashion e-commerce platform built for a curated womenswear brand specialising in co-ord sets, wide-leg pants, skirts, jumpsuits, and knit tops. The platform delivers a seamless end-to-end shopping experience — from browsing curated collections to checkout — for fashion-forward women across Kenya and East Africa. The brand positions itself around quiet luxury and everyday elegance, and the platform reflects that through clean design, smooth UX, and a fully operational storefront with real-time inventory and order management.",
+      "features": [
+        "Full product catalogue with 20+ SKUs across 5 collections",
+        "Multi-variant product support (colour, size) with real-time inventory",
+        "Shopping cart with live subtotal and quantity management",
+        "Secure checkout with M-PESA Till and card payment integration",
+        "Bundle system allowing curated product sets (e.g. The Kulola Starter Bundle)",
+        "Promo code engine with influencer attribution and usage tracking",
+        "Admin dashboard with revenue analytics, order management, and best-seller tracking",
+        "Order status workflow (Paid → Processing → Shipped → Delivered)",
+        "Customer accounts and order history",
+        "Info pages for How to Order, Size Guide, Shipping & Delivery, and Returns",
+        "New Arrivals and Bestseller tagging with badge system",
+        "Testimonials section with product-linked reviews",
+        "WhatsApp, Instagram, and TikTok integration for customer support and promotion",
+        "Countdown timer for limited-time sales",
+        "Responsive mobile-first design optimised for conversion"
+      ],
+      "execution": "Developed Kulola's Closet as the lead full-stack developer, building the entire platform from the ground up using Elixir and Phoenix LiveView for a fast, real-time shopping experience. Designed and implemented the full commerce layer — product management, collections, cart, checkout, and order lifecycle — alongside a comprehensive admin panel giving the store owner full visibility into orders, revenue trends, customers, and catalogue. Integrated M-PESA (Till number) for local payments alongside card support to serve both Kenyan and international shoppers. Built a promo code system that tracks influencer-driven sales by attributing codes to specific influencers (e.g. podcast and social media partners). The bundle feature was implemented to increase average order value by allowing the owner to curate multi-product sets sold as a single purchase. Prioritised a clean, editorial aesthetic that reflects the brand's quiet luxury positioning — letting product photography and typography do the heavy lifting.",
+      "projectResults": {
+        "description": "Kulola's Closet launched as a fully operational fashion storefront with real paying customers and a growing order base from day one. The platform supports the brand's end-to-end sales operation — from discovery to delivery — with the owner managing everything through the admin panel without technical support.",
+        "metrics": [
+          "KES 18,100+ in confirmed revenue within the first days of launch",
+          "4 confirmed orders processed across multiple product types",
+          "20 products across 5 collections successfully catalogued and live",
+          "1 curated bundle live driving higher average order value",
+          "2 influencer promo codes active for attribution tracking",
+          "Full order management workflow operational (Paid, Processing, Shipped, Delivered)",
+          "M-PESA and card payments integrated and processing without failures",
+          "Customer-facing info pages covering ordering, sizing, shipping, and returns"
+        ]
+      },
+      "projectImages": [
+        "images/new_images/kulolascloset.png"
+      ]
+    },
 
       {
   "id": 15,
