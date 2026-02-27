@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Wed Dec 04 2024 23:16:13 GMT+0000 (Coordinated Universal Time) -->
 <html
   data-wf-domain="portfolixtemplate.webflow.io"
@@ -103,13 +103,13 @@
     <script>
       (function () {
         const script = document.createElement("script");
-        script.src = "https://www.app.callwisely.ai/embed/chatbot.js";
-        script.setAttribute("data-product-id", "1");
+        script.src = "https://app.callwisely.ai/embed/chatbot.js";
+        script.setAttribute("data-product-id", "11");
         script.setAttribute(
           "data-api-key",
-          "cb_efbaaf046dfd0e7cd09cbdbadca7c620"
+          "cb_76b1c013a8047dd2a7cadd23390671cf",
         );
-        script.setAttribute("data-api-base", "https://www.app.callwisely.ai");
+        script.setAttribute("data-api-base", "https://app.callwisely.ai");
         document.head.appendChild(script);
       })();
     </script>
@@ -141,10 +141,10 @@
       !(function (o, c) {
         var n = c.documentElement,
           t = " w-mod-";
-        (n.className += t + "js"),
+        ((n.className += t + "js"),
           ("ontouchstart" in o ||
             (o.DocumentTouch && c instanceof DocumentTouch)) &&
-            (n.className += t + "touch");
+            (n.className += t + "touch"));
       })(window, document);
     </script>
     <link
@@ -1053,7 +1053,7 @@
           <script>
             document.addEventListener("DOMContentLoaded", function () {
               const cards = document.querySelectorAll(
-                ".more-templates-badge-wrapper"
+                ".more-templates-badge-wrapper",
               );
               let currentIndex = 0;
               const ANIMATION_INTERVAL = 8000; // 8 seconds
