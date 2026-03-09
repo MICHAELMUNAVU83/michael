@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Wed Dec 04 2024 23:16:13 GMT+0000 (Coordinated Universal Time) -->
 <html
   data-wf-page="667c754c9d223413082639e3"
@@ -275,7 +275,7 @@
         script.setAttribute("data-product-id", "11");
         script.setAttribute(
           "data-api-key",
-          "cb_efbaaf046dfd0e7cd09cbdbadca7c620"
+          "cb_efbaaf046dfd0e7cd09cbdbadca7c620",
         );
         script.setAttribute("data-api-base", "https://www.app.callwisely.ai");
         document.head.appendChild(script);
@@ -308,7 +308,7 @@
 
           // Show the container with animation
           const section = document.querySelector(
-            '[data-w-id="61bb4c9d-3c6c-962a-127d-499ae220c37f"]'
+            '[data-w-id="61bb4c9d-3c6c-962a-127d-499ae220c37f"]',
           );
           section.style.opacity = "1";
         } catch (error) {
@@ -337,17 +337,17 @@
                 <div class="card-project-v1---left-contet">
                     <div>
                         <h3 class="display-7 mid">${escapeHtml(
-                          project.title
+                          project.title,
                         )}</h3>
                         <div class="mg-top-extra-small">
                             <div class="display-3">${escapeHtml(
-                              project.date
+                              project.date,
                             )}</div>
                         </div>
                     </div>
                     <div class="inner-container _380px">
                         <p>${escapeHtml(
-                          truncateText(project.projectDescription, 150)
+                          truncateText(project.projectDescription, 150),
                         )}</p>
                         <div class="mg-top-medium mg-top-32px---mbl">
                             <div class="link hover-none mid">
@@ -410,7 +410,7 @@
 
             if (category !== "all") {
               filteredProjects = data.projects.filter((project) =>
-                project.category.toLowerCase().includes(category.toLowerCase())
+                project.category.toLowerCase().includes(category.toLowerCase()),
               );
             }
 
@@ -440,7 +440,7 @@
             });
 
             const section = document.querySelector(
-              '[data-w-id="61bb4c9d-3c6c-962a-127d-499ae220c37f"]'
+              '[data-w-id="61bb4c9d-3c6c-962a-127d-499ae220c37f"]',
             );
             section.style.opacity = "1";
           });
@@ -470,7 +470,7 @@
                   .includes(searchTerm.toLowerCase()) ||
                 project.category
                   .toLowerCase()
-                  .includes(searchTerm.toLowerCase())
+                  .includes(searchTerm.toLowerCase()),
             );
 
             const container = document.getElementById("projects-container");
@@ -504,10 +504,10 @@
       !(function (o, c) {
         var n = c.documentElement,
           t = " w-mod-";
-        (n.className += t + "js"),
+        ((n.className += t + "js"),
           ("ontouchstart" in o ||
             (o.DocumentTouch && c instanceof DocumentTouch)) &&
-            (n.className += t + "touch");
+            (n.className += t + "touch"));
       })(window, document);
     </script>
   </head>
@@ -656,6 +656,15 @@
           </div>
         </div>
       </div>
+
+      <iframe
+        src="https://classify.michaelmunavu.com/"
+        width="100%"
+        height="600px"
+        style="border: 0"
+        allowfullscreen
+      >
+      </iframe>
       <section class="section hero-section---v1">
         <div class="w-layout-blockcontainer container-default w-container">
           <div class="w-layout-grid grid-2-columns hero-grid---v1">
