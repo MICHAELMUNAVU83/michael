@@ -1,6 +1,97 @@
 {
   "projects": [
     {
+      "id": 18,
+      "client": "Oasis Technologies",
+      "role": "Full-Stack Developer & E-Commerce Architect",
+      "category": "Mobile Tech / Retail E-Commerce",
+      "deliverables": [
+        "Full e-commerce storefront",
+        "Product catalogue for phones & accessories",
+        "Screen repair services booking section",
+        "M-PESA, Visa & Mastercard payment integration",
+        "Admin dashboard & inventory management",
+        "Mobile-responsive design",
+        "Social media integration"
+      ],
+      "date": "2025-2026",
+      "websiteLink": "https://oasistechnologies.co.ke",
+      "projectDescription": "Oasis Technologies is a premium mobile technology hub based in Thika, Kenya, specialising in Ex-UK iPhones, Samsung devices, phone accessories, and expert screen repair services. The platform serves customers across Kiambu County and beyond, offering a curated catalogue of refurbished and new devices with transparent pricing in KES. The site extends the physical shop at Mama Ngina Jeff K Centre into a digital storefront, showcasing products, repair services, and enabling customers to engage with the business online through a clean, trustworthy experience that reflects the brand's core values of quality and transparency.",
+      "features": [
+        "Product catalogue for Ex-UK iPhones starting from KES 45,000",
+        "Samsung device listings — new and Ex-UK inventory from KES 28,000",
+        "Full accessories range including cases, chargers, screen protectors, power banks, and Bluetooth speakers",
+        "Screen repair services section with 30-day warranty and same-day turnaround info",
+        "Transparent pricing and condition details for all refurbished devices",
+        "KES currency support with M-Pesa, Visa, and Mastercard payment integration",
+        "Contact and location info with business hours",
+        "Instagram, TikTok, Facebook, and Twitter social media integration",
+        "Mobile-first responsive design for on-the-go shoppers"
+      ],
+      "execution": "Developed the Oasis Technologies platform as the lead full-stack developer, building a clean and trustworthy digital storefront for the Thika-based phone retail and repair business. Designed the product catalogue to clearly present Ex-UK device conditions and pricing — a key trust factor for refurbished phone buyers. Integrated multiple payment methods (M-Pesa, Visa, Mastercard) to serve both local and card-paying customers. The repair services section was built to clearly communicate the workshop's value proposition: genuine parts, transparent process, and a 30-day warranty. Prioritised a clean, professional design that builds consumer confidence for a business in a market where trust is critical.",
+      "projectResults": {
+        "description": "Oasis Technologies launched with a fully operational digital presence that extended its Thika physical store into an online sales and inquiry channel, enabling customers across Kenya to browse devices, understand repair services, and get in touch — all through a professional, conversion-optimised platform.",
+        "metrics": [
+          "Full product catalogue live across Ex-UK iPhones, Samsung devices, and accessories",
+          "Screen repair services clearly presented with pricing from KES 3,500",
+          "M-Pesa, Visa, and Mastercard payments integrated",
+          "Multi-platform social media presence linked (Instagram, TikTok, Facebook, Twitter)",
+          "Business hours, location, and contact info prominently accessible",
+          "Mobile-first design ensuring accessibility for Thika and broader Kenyan customers"
+        ]
+      },
+      "projectImages": [
+        "images/new_images/oasistechnologies.png"
+      ]
+    },
+    {
+      "id": 17,
+      "client": "The Mint Liquor Store",
+      "role": "Full-Stack Developer & E-Commerce Architect",
+      "category": "Liquor / Retail E-Commerce",
+      "deliverables": [
+        "Full e-commerce storefront",
+        "Product catalogue & collections management",
+        "Shopping cart & checkout system",
+        "M-PESA & card payment integration",
+        "Admin dashboard & order management",
+        "Promotions & offers system",
+        "Best sellers & limited edition tagging",
+        "Customer accounts & cart management",
+        "Responsive mobile-first design"
+      ],
+      "date": "2025-2026",
+      "websiteLink": "https://themint.co.ke",
+      "projectDescription": "The Mint Liquor Store is Nairobi's premier liquor e-commerce platform, serving customers across Kenya with a curated selection of spirits, wines, and premium beverages. Located at TRM, Thika Road, The Mint is recognised as Nairobi's most trusted spirits and wine destination. The platform delivers a seamless online shopping experience — from browsing a rich product catalogue to checkout — with features like promotional offers, best seller highlights, limited edition drops, and a KES-denominated storefront built for the Kenyan market.",
+      "features": [
+        "Full product catalogue spanning whiskies, spirits, wines, and premium beverages",
+        "Best seller and limited edition product tagging with badge system",
+        "Dynamic promotional banners for offers like Black Friday and exclusive deals",
+        "Shopping cart with live subtotal and quantity management",
+        "Secure checkout with M-PESA and card payment integration",
+        "KES currency support for the local Kenyan market",
+        "Customer accounts and order history",
+        "Today's Highlights section with featured products",
+        "Responsive mobile-first design optimised for conversion",
+        "Admin dashboard for product and order management"
+      ],
+      "execution": "Developed The Mint Liquor Store as the lead full-stack developer, building the entire platform from the ground up. Designed and implemented the full commerce layer — product catalogue, collections, promotional systems, cart, checkout, and order lifecycle — alongside an admin panel giving the store owner full visibility into orders and inventory. Integrated M-PESA for seamless local payments alongside card support to serve Kenyan shoppers. Built a dynamic promotions system to support campaigns like Black Friday sales and exclusive product offers. The platform reflects The Mint's premium brand positioning through a clean, professional design that highlights product photography and drives conversion.",
+      "projectResults": {
+        "description": "The Mint Liquor Store launched as a fully operational e-commerce platform serving Nairobi's liquor retail market, enabling the business to extend its TRM physical store presence into a 24/7 online sales channel with a smooth customer experience.",
+        "metrics": [
+          "Successfully launched full e-commerce operations for Nairobi's premier liquor store",
+          "Live product catalogue spanning multiple spirit and wine categories",
+          "M-PESA and card payments integrated and processing without failures",
+          "Dynamic promotions system live with Black Friday and exclusive offer campaigns",
+          "Best seller and limited edition product system operational",
+          "Full order management workflow active and running"
+        ]
+      },
+      "projectImages": [
+        "images/new_images/themint.png"
+      ]
+    },
+    {
       "id": 16,
       "client": "Kulola's Closet",
       "role": "Full-Stack Developer & E-Commerce Architect",
