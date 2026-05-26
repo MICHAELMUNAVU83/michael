@@ -266,6 +266,20 @@
             rotateY(0) rotateZ(0) skew(0, 0);
         }
       }
+
+      /* Tighten default section rhythm so stacked sections feel less airy. */
+      .section {
+        padding-top: clamp(56px, 7vw, 80px);
+        padding-bottom: clamp(56px, 7vw, 80px);
+      }
+
+      .hero-bottom-content-wrapper---v1 {
+        margin-top: clamp(32px, 5vw, 56px);
+      }
+
+      .mg-top-section {
+        margin-top: clamp(32px, 5vw, 48px);
+      }
     </style>
 
     <script>

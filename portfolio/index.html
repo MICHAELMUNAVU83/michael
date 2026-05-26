@@ -131,17 +131,30 @@
       WebFont.load({ google: { families: ["Inter:regular,500,700"] } });
     </script>
     <script>
+// Resolve project image paths against the shared root images/ folder
+function normalizeProjectImages(data) {
+    if (!data || !Array.isArray(data.projects)) return;
+    data.projects.forEach(function (p) {
+        if (Array.isArray(p.projectImages)) {
+            p.projectImages = p.projectImages.map(function (img) {
+                return img && !/^(\/|https?:)/.test(img) ? '../' + img : img;
+            });
+        }
+    });
+}
+
 // Function to load and display projects
 async function loadProjects() {
     try {
         // Fetch the JSON file
-        const response = await fetch('./projects.json');
-        
+        const response = await fetch('../projects.json');
+
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        
+
         const data = await response.json();
+        normalizeProjectImages(data);
         
         // Get the container
         const container = document.getElementById('projects-container');
@@ -260,9 +273,10 @@ function truncateText(text, maxLength) {
 
 // Optional: Filter projects by category
 function filterProjects(category = 'all') {
-    fetch('./projects.json')
+    fetch('../projects.json')
         .then(response => response.json())
         .then(data => {
+            normalizeProjectImages(data);
             let filteredProjects = data.projects;
             
             if (category !== 'all') {
@@ -283,9 +297,10 @@ function filterProjects(category = 'all') {
 
 // Optional: Limit number of projects shown
 function loadFeaturedProjects(limit = 6) {
-    fetch('./projects.json')
+    fetch('../projects.json')
         .then(response => response.json())
         .then(data => {
+            normalizeProjectImages(data);
             const featuredProjects = data.projects.slice(0, limit);
             
             const container = document.getElementById('projects-container');
@@ -312,10 +327,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Optional: Add search functionality
 function searchProjects(searchTerm) {
-    fetch('./projects.json')
+    fetch('../projects.json')
         .then(response => response.json())
         .then(data => {
-            const filteredProjects = data.projects.filter(project => 
+            normalizeProjectImages(data);
+            const filteredProjects = data.projects.filter(project =>
                 project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 project.projectDescription.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 project.category.toLowerCase().includes(searchTerm.toLowerCase())

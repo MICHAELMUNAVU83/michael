@@ -1097,7 +1097,7 @@
         var projectId = getProjectIdFromURL();
 
         // Fetch projects data
-        fetch("./projects.json")
+        fetch("../projects.json")
           .then(function (response) {
             if (!response.ok) {
               throw new Error("Failed to load projects data");
@@ -1105,6 +1105,15 @@
             return response.json();
           })
           .then(function (data) {
+            // Resolve image paths against the shared root images/ folder
+            data.projects.forEach(function (p) {
+              if (Array.isArray(p.projectImages)) {
+                p.projectImages = p.projectImages.map(function (img) {
+                  return img && !/^(\/|https?:)/.test(img) ? "../" + img : img;
+                });
+              }
+            });
+
             // Find the specific project
             var project = null;
             for (var i = 0; i < data.projects.length; i++) {
