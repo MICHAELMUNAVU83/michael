@@ -862,6 +862,10 @@
         return div.innerHTML;
       }
 
+      function getProjectTitle(project) {
+        return project.title || project.client || "Untitled Project";
+      }
+
       // Populate gallery
       function populateGallery(images) {
         var gallery = document.getElementById("project-gallery");
@@ -946,6 +950,7 @@
             project.projectImages && project.projectImages[0]
               ? project.projectImages[0]
               : "/images/default-project.jpg";
+          var projectTitle = getProjectTitle(project);
 
           projectCard.innerHTML =
             '<a data-w-id="a03d46fc-d824-3d5e-3526-6e93e8c9e076" style="opacity: 0" href="/project/?id=' +
@@ -955,12 +960,12 @@
             '<img src="' +
             escapeHtml(imageUrl) +
             '" loading="eager" alt="' +
-            escapeHtml(project.title) +
+            escapeHtml(projectTitle) +
             '" class="image cover-image project-card-v3---image" />' +
             "</div>" +
             '<div class="project-card-v3---content">' +
             '<h3 class="display-6 mid title">' +
-            escapeHtml(project.title) +
+            escapeHtml(projectTitle) +
             "</h3>" +
             '<p class="mg-top-tiny">' +
             escapeHtml(project.category) +
@@ -1004,9 +1009,11 @@
 
       // Populate project details
       function populateProjectDetails(project) {
+        var projectTitle = getProjectTitle(project);
+
         // Basic info
-        safeSetText("page-title", project.client);
-        safeSetText("project-title", project.client);
+        safeSetText("page-title", projectTitle);
+        safeSetText("project-title", projectTitle);
         safeSetText("project-description", project.projectDescription);
 
         // Images

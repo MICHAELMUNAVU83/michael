@@ -177,6 +177,8 @@ async function loadProjects() {
 
 // Function to create a project card element
 function createProjectCard(project, index) {
+    const projectTitle = getProjectTitle(project);
+
     // Create the main wrapper div
     const cardWrapper = document.createElement('div');
     
@@ -204,7 +206,7 @@ function createProjectCard(project, index) {
             <div class="card-project-v1---content-wrapper">
                 <div class="card-project-v1---left-contet">
                     <div>
-                        <h2 class="display-7 mid">${escapeHtml(project.title)}</h2>
+                        <h2 class="display-7 mid">${escapeHtml(projectTitle)}</h2>
                         <div class="mg-top-extra-small">
                             <div class="display-3">${escapeHtml(project.date)}</div>
                         </div>
@@ -228,7 +230,7 @@ function createProjectCard(project, index) {
                     <img
                         src="${project.projectImages && project.projectImages[0] ? project.projectImages[0] : '/images/default-project.jpg'}"
                         loading="eager"
-                        alt="${escapeHtml(project.title)}"
+                        alt="${escapeHtml(projectTitle)}"
                         class="image cover-image project-card-v1-image"
                         onerror="this.src='/images/default-project.jpg'"
                     />
@@ -263,6 +265,10 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+}
+
+function getProjectTitle(project) {
+    return project.title || project.client || 'Untitled Project';
 }
 
 // Helper function to truncate text
@@ -332,7 +338,7 @@ function searchProjects(searchTerm) {
         .then(data => {
             normalizeProjectImages(data);
             const filteredProjects = data.projects.filter(project =>
-                project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                getProjectTitle(project).toLowerCase().includes(searchTerm.toLowerCase()) ||
                 project.projectDescription.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 project.category.toLowerCase().includes(searchTerm.toLowerCase())
             );

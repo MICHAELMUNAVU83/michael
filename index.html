@@ -335,6 +335,8 @@
 
       // Function to create a project card element
       function createProjectCard(project) {
+        const projectTitle = getProjectTitle(project);
+
         // Create the main wrapper div
         const cardWrapper = document.createElement("div");
         cardWrapper.setAttribute("role", "listitem");
@@ -351,7 +353,7 @@
                 <div class="card-project-v1---left-contet">
                     <div>
                         <h3 class="display-7 mid">${escapeHtml(
-                          project.title,
+                          projectTitle,
                         )}</h3>
                         <div class="mg-top-extra-small">
                             <div class="display-3">${escapeHtml(
@@ -384,7 +386,7 @@
                             : ""
                         }"
                         loading="eager"
-                        alt="${escapeHtml(project.title)}"
+                        alt="${escapeHtml(projectTitle)}"
                         class="image cover-image project-card-v1-image"
                         onerror="this.src=""
                     />
@@ -407,6 +409,10 @@
         const div = document.createElement("div");
         div.textContent = text;
         return div.innerHTML;
+      }
+
+      function getProjectTitle(project) {
+        return project.title || project.client || "Untitled Project";
       }
 
       // Helper function to truncate text
@@ -476,7 +482,7 @@
           .then((data) => {
             const filteredProjects = data.projects.filter(
               (project) =>
-                project.title
+                getProjectTitle(project)
                   .toLowerCase()
                   .includes(searchTerm.toLowerCase()) ||
                 project.projectDescription

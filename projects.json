@@ -1,5 +1,53 @@
 {
   "projects": [
+    {
+      "id": 20,
+      "title": "Onguru Africa",
+      "client": "Alvas Onguru",
+      "role": "Portfolio Website Designer & Developer",
+      "category": "Personal Brand / Strategy Portfolio",
+      "deliverables": [
+        "Personal brand website",
+        "Responsive hero and biography sections",
+        "Selected work showcase",
+        "Insights and thought-leadership section",
+        "Highlights and impact storytelling blocks",
+        "Profile download and contact CTAs",
+        "Mobile-responsive portfolio experience"
+      ],
+      "date": "2026",
+      "websiteLink": "https://www.onguru.africa/",
+      "projectDescription": "Onguru Africa is the personal website for Alvas Onguru, a communications and marketing leader focused on brand architecture, storytelling, creative leadership, and Africa-wide impact. The experience introduces his profile, selected work, insights, leadership background, and measurable campaign results through a clean editorial layout.",
+      "features": [
+        "Bold hero section anchored by a clear personal brand statement",
+        "Selected work section spotlighting climate, brand, and Africa-wide campaigns",
+        "Insights area linking articles on creativity, culture, brands, and Africa's creative economy",
+        "Biography and leadership cards summarizing 25+ years of experience",
+        "Impact highlights section surfacing campaign reach and leadership signals",
+        "Clear contact and profile download calls to action",
+        "Responsive layout built for both desktop storytelling and mobile readability",
+        "Consistent orange, black, and white visual language aligned to the brand"
+      ],
+      "execution": "Built Onguru Africa as a polished personal-brand and thought-leadership site for Alvas Onguru, translating a senior communications career into a confident digital presence. The structure focused on four goals: establish credibility quickly, showcase selected work, surface published insights, and make contact easy. The build emphasizes strong hierarchy, image-led storytelling, and concise content blocks so visitors can understand the brand, experience, and impact at a glance.",
+      "projectResults": {
+        "description": "The finished site gives Alvas Onguru a focused online home for consulting, speaking, and leadership visibility by bringing together biography, work samples, insights, and proof points in one cohesive experience.",
+        "metrics": [
+          "Live personal brand website launched at onguru.africa",
+          "25+ years of creative leadership experience clearly communicated",
+          "Selected work showcased across brand strategy, climate communications, and Africa-wide campaigns",
+          "Integrated insights section connecting thought leadership content with portfolio credibility",
+          "Dedicated highlights area surfacing campaign reach and leadership signals",
+          "Clear conversion paths through contact and profile download CTAs"
+        ]
+      },
+      "projectImages": [
+        "images/new_images/onguru-hero.png",
+        "images/new_images/onguru-impact.png",
+        "images/new_images/onguru-insights.png",
+        "images/new_images/onguru-about.png",
+        "images/new_images/onguru-highlights.png"
+      ]
+    },
       {
       "id": 6,
       "client": "CallWisely Technologies",
