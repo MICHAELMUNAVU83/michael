@@ -1,56 +1,59 @@
 {
   "projects": [
     {
-      "id": 20,
-      "title": "Onguru Africa",
-      "client": "Alvas Onguru",
-      "role": "Portfolio Website Designer & Developer",
-      "category": "Personal Brand / Strategy Portfolio",
-      "deliverables": [
-        "Personal brand website",
-        "Responsive hero and biography sections",
-        "Selected work showcase",
-        "Insights and thought-leadership section",
-        "Highlights and impact storytelling blocks",
-        "Profile download and contact CTAs",
-        "Mobile-responsive portfolio experience"
-      ],
-      "date": "2026",
-      "websiteLink": "https://www.onguru.africa/",
-      "projectDescription": "Onguru Africa is the personal website for Alvas Onguru, a communications and marketing leader focused on brand architecture, storytelling, creative leadership, and Africa-wide impact. The experience introduces his profile, selected work, insights, leadership background, and measurable campaign results through a clean editorial layout.",
-      "features": [
-        "Bold hero section anchored by a clear personal brand statement",
-        "Selected work section spotlighting climate, brand, and Africa-wide campaigns",
-        "Insights area linking articles on creativity, culture, brands, and Africa's creative economy",
-        "Biography and leadership cards summarizing 25+ years of experience",
-        "Impact highlights section surfacing campaign reach and leadership signals",
-        "Clear contact and profile download calls to action",
-        "Responsive layout built for both desktop storytelling and mobile readability",
-        "Consistent orange, black, and white visual language aligned to the brand"
-      ],
-      "execution": "Built Onguru Africa as a polished personal-brand and thought-leadership site for Alvas Onguru, translating a senior communications career into a confident digital presence. The structure focused on four goals: establish credibility quickly, showcase selected work, surface published insights, and make contact easy. The build emphasizes strong hierarchy, image-led storytelling, and concise content blocks so visitors can understand the brand, experience, and impact at a glance.",
-      "projectResults": {
-        "description": "The finished site gives Alvas Onguru a focused online home for consulting, speaking, and leadership visibility by bringing together biography, work samples, insights, and proof points in one cohesive experience.",
-        "metrics": [
-          "Live personal brand website launched at onguru.africa",
-          "25+ years of creative leadership experience clearly communicated",
-          "Selected work showcased across brand strategy, climate communications, and Africa-wide campaigns",
-          "Integrated insights section connecting thought leadership content with portfolio credibility",
-          "Dedicated highlights area surfacing campaign reach and leadership signals",
-          "Clear conversion paths through contact and profile download CTAs"
-        ]
-      },
-      "projectImages": [
-        "images/new_images/onguru-hero.png",
-        "images/new_images/onguru-impact.png",
-        "images/new_images/onguru-insights.png",
-        "images/new_images/onguru-about.png",
-        "images/new_images/onguru-highlights.png"
-      ]
-    },
+  "id": 20,
+  "title": "GHCE Medical ERP System",
+  "client": "Glocal Healthcare Centre of Excellence (GHCE)",
+  "role": "Lead Full-Stack Developer & Healthcare Systems Architect",
+  "category": "Healthcare Operations / Hospital Information System",
+  "deliverables": [
+    "Phoenix LiveView healthcare operations platform",
+    "Role-based hospital staff portals",
+    "Patient registration and lifecycle workflows",
+    "Diagnostics, pharmacy, and inventory modules",
+    "Procurement and supplier workflow system",
+    "Public hospital website and appointment booking",
+    "Medical camp scan-to-care workflow",
+    "Reporting, audit, and payment integrations"
+  ],
+  "date": "2026",
+  "websiteLink": null,
+  "projectDescription": "This is a comprehensive Phoenix LiveView healthcare operations system built for GHCE, a GS1 Kenya-founded Level 3 hospital and innovation hub in Kisaju. The platform brings outpatient and inpatient care, diagnostics, pharmacy, inventory, procurement, payments, medical camp workflows, and public-facing hospital pages into one integrated application. It is designed to improve patient safety, operational visibility, and care coordination by combining role-based workflows with standards-driven traceability.",
+  "features": [
+    "Role-based portals for doctors, nurses, reception, pharmacists, lab staff, radiology, admin, inventory managers, suppliers, and support staff",
+    "End-to-end patient lifecycle management including registration, visits, appointments, wallet flows, and printable clinical records",
+    "Clinical workflows for triage, doctor notes, nurse notes, procedures, referrals, and inpatient admissions through discharge",
+    "Laboratory and radiology modules for test definitions, result capture, templates, and diagnostic reporting",
+    "Pharmacy workflows for drug catalogues, GTIN-based verification, dispensing, allocations, batch handling, and stock monitoring",
+    "Inventory and procurement modules covering goods received, inventory issued, requisitions, stock takes, suppliers, invoices, quotes, and delivery notes",
+    "Public website with landing, about, services, blog, contact, and appointment-booking flows",
+    "GS1 barcode and identifier workflows using GSRN, GLN, GTIN, lot, serial, production, and expiry data",
+    "M-Pesa payment integration for healthcare payment and receipt flows",
+    "Dedicated external medical camp workflow with PIN-based access and scan-driven care delivery",
+    "Shared operational tools including SOPs, todos, visitor books, shift handovers, and support staff activity tracking",
+    "Reporting and audit-oriented architecture for medical camp dashboards, payment records, and operational oversight"
+  ],
+  "execution": "Built as a large-scale Elixir and Phoenix LiveView hospital operations platform, Medic was designed to unify clinical, administrative, public-facing, and outreach workflows in one system. The architecture centers on Phoenix contexts for domain separation, LiveView for real-time role-based interfaces, PostgreSQL for transactional data, and GS1-driven identification standards for traceability across patients, staff, rooms, medications, and inventory. The main challenge was not a single feature but coordinating many tightly connected hospital workflows without fragmenting the user experience. That was solved through clear route boundaries by staff role, dedicated domain contexts, shared authenticated tools, and reusable public-site and operational components.",
+  "projectResults": {
+    "description": "Medic delivers a single operational platform for GHCE that connects frontline care, diagnostics, pharmacy, inventory, procurement, medical camp outreach, and public access workflows. The result is a standards-driven hospital system that supports safer care delivery, clearer accountability, and more efficient coordination across departments.",
+    "metrics": [
+      "Unified outpatient, inpatient, diagnostics, pharmacy, inventory, procurement, and public-facing workflows in one application",
+      "Supports multiple role-specific portals across clinical, administrative, supplier, and support teams",
+      "Implements GS1-based patient, user, room, and product traceability workflows across the care pathway",
+      "Includes both hospital operations and external medical camp flows within the same platform",
+      "Combines public website content, appointment booking, payment flows, and internal hospital operations in a single Phoenix LiveView system",
+      "Protects destructive reset and drop database operations at the project level to reduce risk to live healthcare data"
+    ]
+  },
+  "projectImages": [
+    "/images/new_images/ghceone.png",
+    "/images/new_images/ghcetwo.png"
+  ]
+},
+   
       {
       "id": 6,
-      "client": "CallWisely Technologies",
+      "client": "CallWisely AI",
       "role": "AI Integration Developer & Backend Architect",
       "category": "AI/Business Communications",
       "deliverables": [
@@ -93,7 +96,7 @@
    
      {
       "id": 3,
-      "client": "Nexuscale Technologies",
+      "client": "Nexuscale AI",
       "role": "AI Integration Developer & Backend Architect",
       "category": "AI/SaaS Platform",
       "deliverables": [
@@ -220,6 +223,55 @@
       },
       "projectImages": [
         "images/new_images/bree.png"
+      ]
+    },
+
+     {
+      "id": 20,
+      "title": "Onguru Africa",
+      "client": "Alvas Onguru",
+      "role": "Portfolio Website Designer & Developer",
+      "category": "Personal Brand / Strategy Portfolio",
+      "deliverables": [
+        "Personal brand website",
+        "Responsive hero and biography sections",
+        "Selected work showcase",
+        "Insights and thought-leadership section",
+        "Highlights and impact storytelling blocks",
+        "Profile download and contact CTAs",
+        "Mobile-responsive portfolio experience"
+      ],
+      "date": "2026",
+      "websiteLink": "https://www.onguru.africa/",
+      "projectDescription": "Onguru Africa is the personal website for Alvas Onguru, a communications and marketing leader focused on brand architecture, storytelling, creative leadership, and Africa-wide impact. The experience introduces his profile, selected work, insights, leadership background, and measurable campaign results through a clean editorial layout.",
+      "features": [
+        "Bold hero section anchored by a clear personal brand statement",
+        "Selected work section spotlighting climate, brand, and Africa-wide campaigns",
+        "Insights area linking articles on creativity, culture, brands, and Africa's creative economy",
+        "Biography and leadership cards summarizing 25+ years of experience",
+        "Impact highlights section surfacing campaign reach and leadership signals",
+        "Clear contact and profile download calls to action",
+        "Responsive layout built for both desktop storytelling and mobile readability",
+        "Consistent orange, black, and white visual language aligned to the brand"
+      ],
+      "execution": "Built Onguru Africa as a polished personal-brand and thought-leadership site for Alvas Onguru, translating a senior communications career into a confident digital presence. The structure focused on four goals: establish credibility quickly, showcase selected work, surface published insights, and make contact easy. The build emphasizes strong hierarchy, image-led storytelling, and concise content blocks so visitors can understand the brand, experience, and impact at a glance.",
+      "projectResults": {
+        "description": "The finished site gives Alvas Onguru a focused online home for consulting, speaking, and leadership visibility by bringing together biography, work samples, insights, and proof points in one cohesive experience.",
+        "metrics": [
+          "Live personal brand website launched at onguru.africa",
+          "25+ years of creative leadership experience clearly communicated",
+          "Selected work showcased across brand strategy, climate communications, and Africa-wide campaigns",
+          "Integrated insights section connecting thought leadership content with portfolio credibility",
+          "Dedicated highlights area surfacing campaign reach and leadership signals",
+          "Clear conversion paths through contact and profile download CTAs"
+        ]
+      },
+      "projectImages": [
+        "images/new_images/onguru-hero.png",
+        "images/new_images/onguru-impact.png",
+        "images/new_images/onguru-insights.png",
+        "images/new_images/onguru-about.png",
+        "images/new_images/onguru-highlights.png"
       ]
     },
     {
