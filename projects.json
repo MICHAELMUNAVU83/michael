@@ -1,55 +1,6 @@
 {
   "projects": [
-    {
-  "id": 20,
-  "title": "GHCE Medical ERP System",
-  "client": "Glocal Healthcare Centre of Excellence (GHCE)",
-  "role": "Lead Full-Stack Developer & Healthcare Systems Architect",
-  "category": "Healthcare Operations / Hospital Information System",
-  "deliverables": [
-    "Phoenix LiveView healthcare operations platform",
-    "Role-based hospital staff portals",
-    "Patient registration and lifecycle workflows",
-    "Diagnostics, pharmacy, and inventory modules",
-    "Procurement and supplier workflow system",
-    "Public hospital website and appointment booking",
-    "Medical camp scan-to-care workflow",
-    "Reporting, audit, and payment integrations"
-  ],
-  "date": "2026",
-  "websiteLink": null,
-  "projectDescription": "This is a comprehensive Phoenix LiveView healthcare operations system built for GHCE, a GS1 Kenya-founded Level 3 hospital and innovation hub in Kisaju. The platform brings outpatient and inpatient care, diagnostics, pharmacy, inventory, procurement, payments, medical camp workflows, and public-facing hospital pages into one integrated application. It is designed to improve patient safety, operational visibility, and care coordination by combining role-based workflows with standards-driven traceability.",
-  "features": [
-    "Role-based portals for doctors, nurses, reception, pharmacists, lab staff, radiology, admin, inventory managers, suppliers, and support staff",
-    "End-to-end patient lifecycle management including registration, visits, appointments, wallet flows, and printable clinical records",
-    "Clinical workflows for triage, doctor notes, nurse notes, procedures, referrals, and inpatient admissions through discharge",
-    "Laboratory and radiology modules for test definitions, result capture, templates, and diagnostic reporting",
-    "Pharmacy workflows for drug catalogues, GTIN-based verification, dispensing, allocations, batch handling, and stock monitoring",
-    "Inventory and procurement modules covering goods received, inventory issued, requisitions, stock takes, suppliers, invoices, quotes, and delivery notes",
-    "Public website with landing, about, services, blog, contact, and appointment-booking flows",
-    "GS1 barcode and identifier workflows using GSRN, GLN, GTIN, lot, serial, production, and expiry data",
-    "M-Pesa payment integration for healthcare payment and receipt flows",
-    "Dedicated external medical camp workflow with PIN-based access and scan-driven care delivery",
-    "Shared operational tools including SOPs, todos, visitor books, shift handovers, and support staff activity tracking",
-    "Reporting and audit-oriented architecture for medical camp dashboards, payment records, and operational oversight"
-  ],
-  "execution": "Built as a large-scale Elixir and Phoenix LiveView hospital operations platform, Medic was designed to unify clinical, administrative, public-facing, and outreach workflows in one system. The architecture centers on Phoenix contexts for domain separation, LiveView for real-time role-based interfaces, PostgreSQL for transactional data, and GS1-driven identification standards for traceability across patients, staff, rooms, medications, and inventory. The main challenge was not a single feature but coordinating many tightly connected hospital workflows without fragmenting the user experience. That was solved through clear route boundaries by staff role, dedicated domain contexts, shared authenticated tools, and reusable public-site and operational components.",
-  "projectResults": {
-    "description": "Medic delivers a single operational platform for GHCE that connects frontline care, diagnostics, pharmacy, inventory, procurement, medical camp outreach, and public access workflows. The result is a standards-driven hospital system that supports safer care delivery, clearer accountability, and more efficient coordination across departments.",
-    "metrics": [
-      "Unified outpatient, inpatient, diagnostics, pharmacy, inventory, procurement, and public-facing workflows in one application",
-      "Supports multiple role-specific portals across clinical, administrative, supplier, and support teams",
-      "Implements GS1-based patient, user, room, and product traceability workflows across the care pathway",
-      "Includes both hospital operations and external medical camp flows within the same platform",
-      "Combines public website content, appointment booking, payment flows, and internal hospital operations in a single Phoenix LiveView system",
-      "Protects destructive reset and drop database operations at the project level to reduce risk to live healthcare data"
-    ]
-  },
-  "projectImages": [
-    "/images/new_images/ghceone.png",
-    "/images/new_images/ghcetwo.png"
-  ]
-},
+   
    
       {
       "id": 6,
@@ -182,6 +133,112 @@
 "projectImages": [
 "images/new_images/aptitudetest.png"
 ]
+},
+
+{
+  "id": 21,
+  "title": "The Mint",
+  "client": "Liquor Retail Store / Wine & Spirits Merchant",
+  "role": "Lead Full-Stack Developer & Commerce Systems Architect",
+  "category": "E-Commerce / Point-of-Sale & Retail Operations",
+  "deliverables": [
+    "Phoenix LiveView online liquor storefront",
+    "Customer-facing shop, cart, and checkout flows",
+    "Paystack-integrated online payment and receipts",
+    "Role-based admin operations panel",
+    "Product, brand, category, and variant catalog management",
+    "Inventory, stock, and pricing control",
+    "Order, customer, and sales management modules",
+    "Cash registry (till) and expense tracking",
+    "Downloadable sales, stock, cash, and finance reports"
+  ],
+  "date": "2026",
+  "websiteLink": "https://www.themint.co.ke",
+  "projectDescription": "This is a Phoenix LiveView liquor commerce and retail management platform that unifies a public online store with a full back-office operations panel for a wine and spirits business. The system pairs a customer-facing storefront — browsing, product detail pages, cart, and Paystack checkout — with role-based admin tooling for catalog management, inventory, orders, finance, and an in-store cash registry. It is designed to run both the online sales channel and day-to-day retail operations from a single integrated application.",
+  "features": [
+    "Public storefront with home, shop, product detail, about, and contact pages built in Phoenix LiveView",
+    "Cart and multi-step checkout with shipping details, order notes, and order confirmation flow",
+    "Paystack payment gateway integration with transaction initialization, callback verification, and printable receipts",
+    "Role-based admin panel with super_admin, manager, cashier, and inventory_clerk permission tiers",
+    "Catalog management for products, brands, categories, and per-product variants (SKU, size, ABV, pricing, and stock)",
+    "Inventory and stock control with buying price, compare price, stock quantity, featured products, and badges (best seller, limited edition)",
+    "Order and customer management covering order status lifecycle (pending through delivered, cancelled, refunded) and payment status tracking",
+    "Sales, expenses, and finance modules with a manager/super-admin reporting view",
+    "In-store cash registry for opening and closing tills, recording cash expenses, and linking orders to register sessions",
+    "Downloadable reports for sales, expenses, cash, stock, and purchases",
+    "Product reviews and ratings tied to customers and verified purchases",
+    "Configurable site settings, user management, and an admin help section, plus SEO sitemap generation"
+  ],
+  "execution": "Built as an Elixir and Phoenix LiveView application, the platform was designed to merge an online sales channel with retail back-office operations in one system. The architecture centers on Phoenix contexts for domain separation — catalog, cart, orders, cash, expenses, accounts, and settings — with LiveView powering real-time storefront and admin interfaces, PostgreSQL for transactional data, and Paystack for online payments. The main challenge was supporting two very different user groups — public shoppers and internal staff with distinct roles — without fragmenting the codebase. That was solved through clear public/admin route boundaries, live_session permission scoping per staff role, dedicated domain contexts, and reusable LiveView components shared across the storefront and admin panel.",
+  "projectResults": {
+    "description": "The platform delivers a single system that runs both the online liquor store and the underlying retail operation. The result is an integrated commerce solution that supports online ordering and payment alongside catalog, inventory, finance, and in-store cash management, with clear role-based accountability across staff.",
+    "metrics": [
+      "Unified online storefront, checkout, and back-office retail operations in one application",
+      "Supports four distinct staff roles with section-level access control across products, orders, finance, and settings",
+      "Implements variant-level catalog and inventory management with SKU, size, ABV, and multi-tier pricing",
+      "Integrates Paystack online payments with callback verification and printable customer receipts",
+      "Combines online order flows with an in-store cash registry and expense tracking in a single Phoenix LiveView system",
+      "Provides exportable sales, stock, cash, expense, and purchase reports for finance and operational oversight"
+    ]
+  },
+  "projectImages": [
+    "/images/new_images/liquor1.JPG",
+    "/images/new_images/liquor2.JPG",
+    "/images/new_images/liquor3.JPG",
+    "/images/new_images/liquor4.PNG",
+     "/images/new_images/liquor5.PNG"
+
+  ]
+},
+ {
+  "id": 20,
+  "title": "GHCE Medical ERP System",
+  "client": "Glocal Healthcare Centre of Excellence (GHCE)",
+  "role": "Lead Full-Stack Developer & Healthcare Systems Architect",
+  "category": "Healthcare Operations / Hospital Information System",
+  "deliverables": [
+    "Phoenix LiveView healthcare operations platform",
+    "Role-based hospital staff portals",
+    "Patient registration and lifecycle workflows",
+    "Diagnostics, pharmacy, and inventory modules",
+    "Procurement and supplier workflow system",
+    "Public hospital website and appointment booking",
+    "Medical camp scan-to-care workflow",
+    "Reporting, audit, and payment integrations"
+  ],
+  "date": "2026",
+  "websiteLink": null,
+  "projectDescription": "This is a comprehensive Phoenix LiveView healthcare operations system built for GHCE, a GS1 Kenya-founded Level 3 hospital and innovation hub in Kisaju. The platform brings outpatient and inpatient care, diagnostics, pharmacy, inventory, procurement, payments, medical camp workflows, and public-facing hospital pages into one integrated application. It is designed to improve patient safety, operational visibility, and care coordination by combining role-based workflows with standards-driven traceability.",
+  "features": [
+    "Role-based portals for doctors, nurses, reception, pharmacists, lab staff, radiology, admin, inventory managers, suppliers, and support staff",
+    "End-to-end patient lifecycle management including registration, visits, appointments, wallet flows, and printable clinical records",
+    "Clinical workflows for triage, doctor notes, nurse notes, procedures, referrals, and inpatient admissions through discharge",
+    "Laboratory and radiology modules for test definitions, result capture, templates, and diagnostic reporting",
+    "Pharmacy workflows for drug catalogues, GTIN-based verification, dispensing, allocations, batch handling, and stock monitoring",
+    "Inventory and procurement modules covering goods received, inventory issued, requisitions, stock takes, suppliers, invoices, quotes, and delivery notes",
+    "Public website with landing, about, services, blog, contact, and appointment-booking flows",
+    "GS1 barcode and identifier workflows using GSRN, GLN, GTIN, lot, serial, production, and expiry data",
+    "M-Pesa payment integration for healthcare payment and receipt flows",
+    "Dedicated external medical camp workflow with PIN-based access and scan-driven care delivery",
+    "Shared operational tools including SOPs, todos, visitor books, shift handovers, and support staff activity tracking",
+    "Reporting and audit-oriented architecture for medical camp dashboards, payment records, and operational oversight"
+  ],
+  "execution": "Built as a large-scale Elixir and Phoenix LiveView hospital operations platform, Medic was designed to unify clinical, administrative, public-facing, and outreach workflows in one system. The architecture centers on Phoenix contexts for domain separation, LiveView for real-time role-based interfaces, PostgreSQL for transactional data, and GS1-driven identification standards for traceability across patients, staff, rooms, medications, and inventory. The main challenge was not a single feature but coordinating many tightly connected hospital workflows without fragmenting the user experience. That was solved through clear route boundaries by staff role, dedicated domain contexts, shared authenticated tools, and reusable public-site and operational components.",
+  "projectResults": {
+    "description": "Medic delivers a single operational platform for GHCE that connects frontline care, diagnostics, pharmacy, inventory, procurement, medical camp outreach, and public access workflows. The result is a standards-driven hospital system that supports safer care delivery, clearer accountability, and more efficient coordination across departments.",
+    "metrics": [
+      "Unified outpatient, inpatient, diagnostics, pharmacy, inventory, procurement, and public-facing workflows in one application",
+      "Supports multiple role-specific portals across clinical, administrative, supplier, and support teams",
+      "Implements GS1-based patient, user, room, and product traceability workflows across the care pathway",
+      "Includes both hospital operations and external medical camp flows within the same platform",
+      "Combines public website content, appointment booking, payment flows, and internal hospital operations in a single Phoenix LiveView system",
+      "Protects destructive reset and drop database operations at the project level to reduce risk to live healthcare data"
+    ]
+  },
+  "projectImages": [
+    "/images/new_images/ghceone.png",
+    "/images/new_images/ghcetwo.png"
+  ]
 },
    {
       "id": 7,
