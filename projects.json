@@ -134,7 +134,61 @@
 "images/new_images/aptitudetest.png"
 ]
 },
-
+{
+  "id": 22,
+  "title": "ChasingSun",
+  "client": "Internal Greenhouse Operations Team / Agribusiness Operations",
+  "role": "Lead Full-Stack Developer & Operations Systems Architect",
+  "category": "Agritech / Greenhouse Operations & Yield Analytics",
+  "deliverables": [
+    "Phoenix LiveView greenhouse operations platform",
+    "Role-based operations dashboard and admin panel",
+    "Greenhouse, venture, and crop-cycle management modules",
+    "Weekly harvest recording and performance tracking flows",
+    "Forecasting, projection, and crop recommendation tools",
+    "Guest-restricted read-only dashboard access",
+    "AI-assisted pickup-note harvest capture",
+    "Farm visit tracking and operational reporting",
+    "Crop-rule, pricing, and planning configuration",
+    "Seeded operational data and legacy import support"
+  ],
+  "date": "2026",
+  "websiteLink": "",
+  "projectDescription": "This is a Phoenix LiveView greenhouse operations and crop-performance platform built to help an internal agribusiness team manage production cycles, weekly harvest tracking, and short-range output forecasting from one system. The application combines live operational visibility with role-based back-office tooling for greenhouse records, crop rules, farm visits, harvest actuals, performance analytics, and forward-looking recommendations. It is designed to centralize day-to-day greenhouse management while improving planning accuracy, reporting, and operational accountability.",
+  "features": [
+    "Live operations dashboard with greenhouse status, expected weekly output, charts, and operational notifications",
+    "Greenhouse registry with venture assignment, tank and size metadata, and active crop-cycle management",
+    "Crop-cycle planning covering crop type, variety, plant count, nursery dates, transplant dates, harvest window, and soil recovery timing",
+    "Weekly harvest record management with greenhouse-level tracking, notes, pricing per kg, and update-in-place workflow",
+    "Performance analytics comparing expected yield vs actual yield with revenue estimation",
+    "8-week forecast and next-Saturday projection tools driven by crop rules and live greenhouse data",
+    "Crop recommendation engine and daily operational recommendation refresh flows",
+    "Role-based access control for admins, operators, viewers, and guest users",
+    "Guest account restrictions with configurable page, section, and venture-level visibility",
+    "Admin tooling for crop rules, ventures, guest accounts, and in-app operational guidance",
+    "Farm visit tracking and greenhouse visit-status reporting",
+    "AI-assisted pickup-note image analysis to prefill harvest data using OpenAI"
+  ],
+  "execution": "Built as an Elixir and Phoenix LiveView application, the platform was structured around clear domain contexts for accounts, operations, harvesting, analytics, and importing. Phoenix LiveView powers both the operational dashboards and data-entry workflows, while PostgreSQL and Ecto provide transactional modeling for greenhouses, crop cycles, harvest records, and reporting data. The main challenge was turning greenhouse planning, live operations monitoring, and harvest performance tracking into one coherent system without mixing business rules into the UI. That was solved through dedicated contexts, role-aware live sessions, reusable UI components, rule-driven forecasting logic, and pub-sub updates that keep operational views current across the application.",
+  "projectResults": {
+    "description": "The platform delivers a unified greenhouse operations system that connects crop-cycle planning, weekly harvest capture, analytics, and forecasting in one application. The result is an internal control room for greenhouse teams that improves operational visibility, planning consistency, and reporting across ventures and production units.",
+    "metrics": [
+      "Unified greenhouse registry, crop-cycle planning, harvest tracking, and forecasting in one Phoenix LiveView application",
+      "Supports four user roles with permission-based access across dashboard, operations, and admin workflows",
+      "Tracks greenhouse-level production with venture grouping, cycle timing, plant counts, and crop metadata",
+      "Provides expected-vs-actual yield analysis and revenue estimation from weekly harvest records",
+      "Generates 8-week forecasts, next-Saturday projections, and crop recommendations from live operational data",
+      "Adds AI-assisted pickup-note analysis to speed up harvest entry and reduce manual data capture friction"
+    ]
+  },
+  "projectImages": [
+"images/new_images/chasing1.png",
+"images/new_images/chasing2.png",
+"images/new_images/chasing3.png",
+"images/new_images/chasing4.png"
+]
+}
+,
 {
   "id": 21,
   "title": "The Mint",
