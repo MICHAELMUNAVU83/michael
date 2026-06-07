@@ -115,6 +115,156 @@
       rel="stylesheet"
       type="text/css"
     />
+    <style>
+      .project-hero-intro {
+        position: relative;
+      }
+
+      .project-hero-link-card {
+        display: none;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 14px;
+        width: fit-content;
+        max-width: 100%;
+        margin-top: 24px;
+        padding: 10px 12px 10px 18px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 999px;
+        background: linear-gradient(180deg, #3d3d3d 0%, #1c1c1c 100%);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.18),
+          0 10px 24px rgba(17, 17, 17, 0.18);
+        color: #ffffff;
+        text-decoration: none;
+        transition:
+          transform 200ms ease,
+          box-shadow 200ms ease,
+          border-color 200ms ease;
+      }
+
+      .project-hero-link-card:hover {
+        transform: translateY(-2px);
+        border-color: rgba(255, 255, 255, 0.22);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.2),
+          0 14px 30px rgba(17, 17, 17, 0.24);
+      }
+
+      .project-hero-link-copy {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        min-width: 0;
+      }
+
+      .project-hero-link-label {
+        margin-bottom: 0;
+        color: rgba(255, 255, 255, 0.62);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .project-hero-link-url {
+        overflow-wrap: anywhere;
+        color: #ffffff;
+        font-size: clamp(18px, 1.9vw, 22px);
+        font-weight: 700;
+        line-height: 1.1;
+      }
+
+      .project-hero-link-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        background:
+          radial-gradient(circle at 30% 30%, #ffe582 0%, #ffc94b 45%, #ff9f2f 78%, #ff6e45 100%);
+        box-shadow:
+          inset 0 1px 1px rgba(255, 255, 255, 0.45),
+          0 8px 18px rgba(255, 172, 46, 0.28);
+        color: #181818;
+        font-size: 24px;
+        line-height: 1;
+      }
+
+      .project-sidebar-link {
+        display: none;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        width: fit-content;
+        max-width: 100%;
+        padding: 10px 14px 10px 16px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 999px;
+        background: linear-gradient(180deg, #3d3d3d 0%, #1c1c1c 100%);
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.16),
+          0 8px 18px rgba(17, 17, 17, 0.14);
+        color: #ffffff;
+        text-decoration: none;
+      }
+
+      .project-sidebar-link .item-icon-left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        margin-right: 0;
+        border-radius: 999px;
+        background:
+          radial-gradient(circle at 30% 30%, #ffe582 0%, #ffc94b 45%, #ff9f2f 78%, #ff6e45 100%);
+        box-shadow:
+          inset 0 1px 1px rgba(255, 255, 255, 0.45),
+          0 6px 14px rgba(255, 172, 46, 0.24);
+      }
+
+      .project-sidebar-link .icon-font-rounded {
+        display: block;
+        color: #181818;
+        font-size: 18px;
+      }
+
+      .project-sidebar-link:hover {
+        color: #ffffff;
+      }
+
+      .project-sidebar-link-text {
+        overflow-wrap: anywhere;
+        font-weight: 600;
+      }
+
+      @media screen and (min-width: 992px) {
+        .project-hero-intro {
+          padding-right: min(32vw, 360px);
+        }
+
+        .project-hero-link-card {
+          position: absolute;
+          top: 0;
+          right: 0;
+          margin-top: 0;
+        }
+      }
+
+      @media screen and (max-width: 767px) {
+        .project-hero-link-card {
+          width: auto;
+          padding: 10px 12px 10px 15px;
+        }
+
+        .project-hero-link-url {
+          font-size: 16px;
+        }
+      }
+    </style>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link
       href="https://fonts.gstatic.com"
@@ -334,13 +484,26 @@
             <div class="logo-wrapper---project-single">
               <h1 id="project-title" class="display-10 mid">Loading...</h1>
             </div>
-            <div class="mg-top-small">
+            <div class="mg-top-small project-hero-intro">
               <div class="inner-container _480px">
                 <div class="inner-container _400px---mbl">
                   <p id="project-description" class="paragraph-small">
                     Loading project details...
                   </p>
                 </div>
+                <a
+                  id="project-website-hero"
+                  href="#"
+                  class="project-hero-link-card"
+                >
+                  <div class="project-hero-link-copy">
+                    <div class="project-hero-link-label">Visit Website</div>
+                    <div id="project-website-hero-label" class="project-hero-link-url">
+                      Loading...
+                    </div>
+                  </div>
+                  <div class="project-hero-link-icon" aria-hidden="true">↗</div>
+                </a>
               </div>
             </div>
           </div>
@@ -436,13 +599,18 @@
                           id="project-website-link"
                           data-w-id="8613752a-dccf-3d68-682b-f1c016de1eb0"
                           href="#"
-                          class="link mid w-inline-block"
+                          class="link mid w-inline-block project-sidebar-link"
                           style="display: none"
                         >
                           <div class="item-icon-left">
-                            <div class="icon-font-rounded"></div>
+                            <div class="icon-font-rounded">↗</div>
                           </div>
-                          <div>View project</div>
+                          <div
+                            id="project-website-link-label"
+                            class="project-sidebar-link-text"
+                          >
+                            View project
+                          </div>
                         </a>
                         <div id="no-website" style="display: none">
                           <div class="display-3 mid text-titles">
@@ -1007,6 +1175,15 @@
         }
       }
 
+      function formatWebsiteUrl(url) {
+        if (!url) return "";
+
+        return url
+          .replace(/^https?:\/\//i, "")
+          .replace(/^www\./i, "")
+          .replace(/\/+$/, "");
+      }
+
       // Populate project details
       function populateProjectDetails(project) {
         var projectTitle = getProjectTitle(project);
@@ -1043,14 +1220,44 @@
 
         // Website link
         var websiteLinkEl = document.getElementById("project-website-link");
+        var websiteLinkLabelEl = document.getElementById(
+          "project-website-link-label"
+        );
+        var heroWebsiteLinkEl = document.getElementById("project-website-hero");
+        var heroWebsiteLabelEl = document.getElementById(
+          "project-website-hero-label"
+        );
         var noWebsiteEl = document.getElementById("no-website");
 
         if (project.websiteLink && websiteLinkEl && noWebsiteEl) {
+          var formattedWebsiteUrl = formatWebsiteUrl(project.websiteLink);
+
           websiteLinkEl.href = project.websiteLink;
+          websiteLinkEl.target = "_blank";
+          websiteLinkEl.rel = "noreferrer noopener";
           websiteLinkEl.style.display = "flex";
+          if (websiteLinkLabelEl) {
+            websiteLinkLabelEl.textContent = formattedWebsiteUrl;
+          }
+
+          if (heroWebsiteLinkEl && heroWebsiteLabelEl) {
+            heroWebsiteLinkEl.href = project.websiteLink;
+            heroWebsiteLinkEl.target = "_blank";
+            heroWebsiteLinkEl.rel = "noreferrer noopener";
+            heroWebsiteLinkEl.style.display = "flex";
+            heroWebsiteLinkEl.setAttribute(
+              "aria-label",
+              "Visit " + formattedWebsiteUrl
+            );
+            heroWebsiteLabelEl.textContent = formattedWebsiteUrl;
+          }
+
           noWebsiteEl.style.display = "none";
         } else if (websiteLinkEl && noWebsiteEl) {
           websiteLinkEl.style.display = "none";
+          if (heroWebsiteLinkEl) {
+            heroWebsiteLinkEl.style.display = "none";
+          }
           noWebsiteEl.style.display = "block";
         }
 
