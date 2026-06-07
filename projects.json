@@ -88,165 +88,9 @@
       ]
     },
   
-    {
-"id": 19,
-"client": "Aptitude Test",
-"role": "Full-Stack Developer & Product Engineer",
-"category": "HR Tech / Recruitment SaaS",
-"deliverables": [
-"AI-powered aptitude testing platform",
-"Admin dashboard for creating and managing candidate tests",
-"Timed candidate assessment interface",
-"OpenAI-powered question generation workflow",
-"AI-assisted result analysis and hiring reports",
-"Secure token-based public test links",
-"Transactional email invitation and completion flows",
-"Responsive landing page and authentication system"
-],
-"date": "2025-2026",
-"websiteLink": "https://aptitudetest.info",
-"projectDescription": "Aptitude Test is an AI-powered candidate assessment platform built to help hiring teams create role-specific aptitude tests, send secure candidate links instantly, and review structured AI-assisted evaluation reports after submission. The platform streamlines early-stage screening by combining automated question generation, timed test delivery, live answer persistence, and post-test analytical reporting into one clean workflow for recruiters and hiring managers.",
-"features": [
-"Admin authentication with protected dashboard access",
-"Create-test flow with candidate email, sector, difficulty, time limit, and question count",
-"OpenAI-powered generation of multiple-choice aptitude questions",
-"Public token-based candidate test access without requiring login",
-"Timed assessment experience with countdown timer and automatic submission on timeout",
-"Instant answer saving as candidates progress through the test",
-"AI-generated result analysis including score, strengths, weaknesses, red flags, and hiring recommendation",
-"Interviewer probe questions and sub-topic breakdowns for follow-up interviews",
-"Email-based invitation, candidate completion, and owner notification workflows",
-"Responsive product landing page for onboarding and product marketing"
-],
-"execution": "Built Aptitude Test as a full-stack recruitment product using Phoenix LiveView, designing both the employer-facing admin experience and the candidate-facing testing flow. Developed the assessment lifecycle end-to-end: authenticated admins can create a test, trigger AI-generated questions, email a secure link to a candidate, and review a structured hiring report after submission. Focused heavily on usability and reliability, including token-gated public access, persisted timing state, immediate answer saving, asynchronous result generation, and branded transactional email communication. The result was a lightweight but production-ready hiring tool that reduces screening friction while giving recruiters sharper signals before interviews.",
-"projectResults": {
-"description": "Aptitude Test launched as a live web platform that turns manual early-stage screening into a faster and more structured digital workflow. The system gives hiring teams a complete assessment pipeline from test creation to candidate completion and AI-assisted review, improving speed, consistency, and decision readiness in recruitment.",
-"metrics": [
-"Production web platform live at aptitudetest.info",
-"End-to-end workflow implemented from test creation to AI-assisted result reporting",
-"Secure token-based candidate access with no candidate login required",
-"Timed assessment experience with persisted progress and auto-submit logic",
-"AI-generated hiring reports including strengths, weaknesses, red flags, and interviewer prompts",
-"Admin dashboard available for sent, in-progress, and completed test management"
-]
-},
-"projectImages": [
-"images/new_images/aptitudetest.png"
-]
-},
-{
-  "id": 22,
-  "title": "ChasingSun",
-  "client": "Internal Greenhouse Operations Team / Agribusiness Operations",
-  "role": "Lead Full-Stack Developer & Operations Systems Architect",
-  "category": "Agritech / Greenhouse Operations & Yield Analytics",
-  "deliverables": [
-    "Phoenix LiveView greenhouse operations platform",
-    "Role-based operations dashboard and admin panel",
-    "Greenhouse, venture, and crop-cycle management modules",
-    "Weekly harvest recording and performance tracking flows",
-    "Forecasting, projection, and crop recommendation tools",
-    "Guest-restricted read-only dashboard access",
-    "AI-assisted pickup-note harvest capture",
-    "Farm visit tracking and operational reporting",
-    "Crop-rule, pricing, and planning configuration",
-    "Seeded operational data and legacy import support"
-  ],
-  "date": "2026",
-  "websiteLink": "",
-  "projectDescription": "This is a Phoenix LiveView greenhouse operations and crop-performance platform built to help an internal agribusiness team manage production cycles, weekly harvest tracking, and short-range output forecasting from one system. The application combines live operational visibility with role-based back-office tooling for greenhouse records, crop rules, farm visits, harvest actuals, performance analytics, and forward-looking recommendations. It is designed to centralize day-to-day greenhouse management while improving planning accuracy, reporting, and operational accountability.",
-  "features": [
-    "Live operations dashboard with greenhouse status, expected weekly output, charts, and operational notifications",
-    "Greenhouse registry with venture assignment, tank and size metadata, and active crop-cycle management",
-    "Crop-cycle planning covering crop type, variety, plant count, nursery dates, transplant dates, harvest window, and soil recovery timing",
-    "Weekly harvest record management with greenhouse-level tracking, notes, pricing per kg, and update-in-place workflow",
-    "Performance analytics comparing expected yield vs actual yield with revenue estimation",
-    "8-week forecast and next-Saturday projection tools driven by crop rules and live greenhouse data",
-    "Crop recommendation engine and daily operational recommendation refresh flows",
-    "Role-based access control for admins, operators, viewers, and guest users",
-    "Guest account restrictions with configurable page, section, and venture-level visibility",
-    "Admin tooling for crop rules, ventures, guest accounts, and in-app operational guidance",
-    "Farm visit tracking and greenhouse visit-status reporting",
-    "AI-assisted pickup-note image analysis to prefill harvest data using OpenAI"
-  ],
-  "execution": "Built as an Elixir and Phoenix LiveView application, the platform was structured around clear domain contexts for accounts, operations, harvesting, analytics, and importing. Phoenix LiveView powers both the operational dashboards and data-entry workflows, while PostgreSQL and Ecto provide transactional modeling for greenhouses, crop cycles, harvest records, and reporting data. The main challenge was turning greenhouse planning, live operations monitoring, and harvest performance tracking into one coherent system without mixing business rules into the UI. That was solved through dedicated contexts, role-aware live sessions, reusable UI components, rule-driven forecasting logic, and pub-sub updates that keep operational views current across the application.",
-  "projectResults": {
-    "description": "The platform delivers a unified greenhouse operations system that connects crop-cycle planning, weekly harvest capture, analytics, and forecasting in one application. The result is an internal control room for greenhouse teams that improves operational visibility, planning consistency, and reporting across ventures and production units.",
-    "metrics": [
-      "Unified greenhouse registry, crop-cycle planning, harvest tracking, and forecasting in one Phoenix LiveView application",
-      "Supports four user roles with permission-based access across dashboard, operations, and admin workflows",
-      "Tracks greenhouse-level production with venture grouping, cycle timing, plant counts, and crop metadata",
-      "Provides expected-vs-actual yield analysis and revenue estimation from weekly harvest records",
-      "Generates 8-week forecasts, next-Saturday projections, and crop recommendations from live operational data",
-      "Adds AI-assisted pickup-note analysis to speed up harvest entry and reduce manual data capture friction"
-    ]
-  },
-  "projectImages": [
-"images/new_images/chasing1.png",
-"images/new_images/chasing2.png",
-"images/new_images/chasing3.png",
-"images/new_images/chasing4.png"
-]
-}
-,
-{
-  "id": 21,
-  "title": "The Mint",
-  "client": "Liquor Retail Store / Wine & Spirits Merchant",
-  "role": "Lead Full-Stack Developer & Commerce Systems Architect",
-  "category": "E-Commerce / Point-of-Sale & Retail Operations",
-  "deliverables": [
-    "Phoenix LiveView online liquor storefront",
-    "Customer-facing shop, cart, and checkout flows",
-    "Paystack-integrated online payment and receipts",
-    "Role-based admin operations panel",
-    "Product, brand, category, and variant catalog management",
-    "Inventory, stock, and pricing control",
-    "Order, customer, and sales management modules",
-    "Cash registry (till) and expense tracking",
-    "Downloadable sales, stock, cash, and finance reports"
-  ],
-  "date": "2026",
-  "websiteLink": "https://www.themint.co.ke",
-  "projectDescription": "This is a Phoenix LiveView liquor commerce and retail management platform that unifies a public online store with a full back-office operations panel for a wine and spirits business. The system pairs a customer-facing storefront — browsing, product detail pages, cart, and Paystack checkout — with role-based admin tooling for catalog management, inventory, orders, finance, and an in-store cash registry. It is designed to run both the online sales channel and day-to-day retail operations from a single integrated application.",
-  "features": [
-    "Public storefront with home, shop, product detail, about, and contact pages built in Phoenix LiveView",
-    "Cart and multi-step checkout with shipping details, order notes, and order confirmation flow",
-    "Paystack payment gateway integration with transaction initialization, callback verification, and printable receipts",
-    "Role-based admin panel with super_admin, manager, cashier, and inventory_clerk permission tiers",
-    "Catalog management for products, brands, categories, and per-product variants (SKU, size, ABV, pricing, and stock)",
-    "Inventory and stock control with buying price, compare price, stock quantity, featured products, and badges (best seller, limited edition)",
-    "Order and customer management covering order status lifecycle (pending through delivered, cancelled, refunded) and payment status tracking",
-    "Sales, expenses, and finance modules with a manager/super-admin reporting view",
-    "In-store cash registry for opening and closing tills, recording cash expenses, and linking orders to register sessions",
-    "Downloadable reports for sales, expenses, cash, stock, and purchases",
-    "Product reviews and ratings tied to customers and verified purchases",
-    "Configurable site settings, user management, and an admin help section, plus SEO sitemap generation"
-  ],
-  "execution": "Built as an Elixir and Phoenix LiveView application, the platform was designed to merge an online sales channel with retail back-office operations in one system. The architecture centers on Phoenix contexts for domain separation — catalog, cart, orders, cash, expenses, accounts, and settings — with LiveView powering real-time storefront and admin interfaces, PostgreSQL for transactional data, and Paystack for online payments. The main challenge was supporting two very different user groups — public shoppers and internal staff with distinct roles — without fragmenting the codebase. That was solved through clear public/admin route boundaries, live_session permission scoping per staff role, dedicated domain contexts, and reusable LiveView components shared across the storefront and admin panel.",
-  "projectResults": {
-    "description": "The platform delivers a single system that runs both the online liquor store and the underlying retail operation. The result is an integrated commerce solution that supports online ordering and payment alongside catalog, inventory, finance, and in-store cash management, with clear role-based accountability across staff.",
-    "metrics": [
-      "Unified online storefront, checkout, and back-office retail operations in one application",
-      "Supports four distinct staff roles with section-level access control across products, orders, finance, and settings",
-      "Implements variant-level catalog and inventory management with SKU, size, ABV, and multi-tier pricing",
-      "Integrates Paystack online payments with callback verification and printable customer receipts",
-      "Combines online order flows with an in-store cash registry and expense tracking in a single Phoenix LiveView system",
-      "Provides exportable sales, stock, cash, expense, and purchase reports for finance and operational oversight"
-    ]
-  },
-  "projectImages": [
-    "/images/new_images/liquor1.JPG",
-    "/images/new_images/liquor2.JPG",
-    "/images/new_images/liquor3.JPG",
-    "/images/new_images/liquor4.PNG",
-     "/images/new_images/liquor5.PNG"
-
-  ]
-},
- {
+     {
   "id": 20,
-  "title": "GHCE Medical ERP System",
+  "title": "Medical ERP System",
   "client": "Glocal Healthcare Centre of Excellence (GHCE)",
   "role": "Lead Full-Stack Developer & Healthcare Systems Architect",
   "category": "Healthcare Operations / Hospital Information System",
@@ -336,6 +180,151 @@
         "images/new_images/bree.png"
       ]
     },
+    {
+  "id": 8,
+  "client": "254 Brewing Co",
+  "role": "Full-Stack Developer",
+  "category": "Hospitality / Brewery / Booking Platform",
+  "deliverables": [
+    "Marketing website for the brewery brand",
+    "Beer catalogue and featured product pages",
+    "Brewery tour booking and payment flow",
+    "Custom tour and quote request system",
+    "Admin content and media management",
+    "Operations dashboard for tours, beers, and inquiries"
+  ],
+  "date": "2026",
+  "websiteLink": "https://254brewing.com",
+  "projectDescription": "254 Brewing Co is a full digital platform for a craft brewery, combining a public-facing brand website with operational tools behind the scenes. The platform showcases the brewery, beers, partners, beer club, and private client offerings while also handling brewery tour bookings, inquiry collection, payments, and day-to-day content management from one system.",
+  "features": [
+    "Public pages for home, about, partners, beer club, private clients, and beer catalogue",
+    "Live brewery tour booking flow with date availability and slot selection",
+    "Paystack payment integration for confirmed tour reservations",
+    "Custom tour request and quote inquiry forms",
+    "Admin dashboard for users, content, media, beers, tours, and quote requests",
+    "Editable website copy through a content management interface",
+    "Media management for images and videos across site sections",
+    "Booking controls including capacity, blackout dates, pricing, and notification emails"
+  ],
+  "execution": "Built the platform using Elixir, Phoenix LiveView, PostgreSQL, Tailwind CSS, Swoosh, and Paystack. The work focused on creating a smooth customer journey for discovering the brand, exploring the beer range, and booking brewery tours, while also giving the internal team a reliable admin system for managing content, media, beers, bookings, and incoming inquiries. A key part of the implementation was combining marketing content and operational workflows in one LiveView application so the brewery could manage both customer experience and internal processes from a single product.",
+  "projectResults": {
+    "description": "The result is a unified brewery platform that supports both customer-facing engagement and internal operations. It gives 254 Brewing Co a modern digital presence while streamlining bookings, inquiries, content updates, and tour management.",
+    "metrics": [
+      "10 public website routes covering brand, products, tours, and private client experiences",
+      "3-step tour booking flow with live availability and payment initiation",
+      "6 admin management areas for users, content, media, beers, tours, and quotes",
+      "Integrated booking, quote request, and custom tour inquiry handling in one platform",
+      "Content-managed marketing pages powered by editable section-based copy",
+      "Centralized media and brewery operations management within a single app"
+    ]
+  },
+  "projectImages": [
+    "images/new_images/brewing.png"
+  ]
+},
+    {
+"id": 19,
+"client": "Aptitude Test",
+"role": "Full-Stack Developer & Product Engineer",
+"category": "HR Tech / Recruitment SaaS",
+"deliverables": [
+"AI-powered aptitude testing platform",
+"Admin dashboard for creating and managing candidate tests",
+"Timed candidate assessment interface",
+"OpenAI-powered question generation workflow",
+"AI-assisted result analysis and hiring reports",
+"Secure token-based public test links",
+"Transactional email invitation and completion flows",
+"Responsive landing page and authentication system"
+],
+"date": "2025-2026",
+"websiteLink": "https://aptitudetest.info",
+"projectDescription": "Aptitude Test is an AI-powered candidate assessment platform built to help hiring teams create role-specific aptitude tests, send secure candidate links instantly, and review structured AI-assisted evaluation reports after submission. The platform streamlines early-stage screening by combining automated question generation, timed test delivery, live answer persistence, and post-test analytical reporting into one clean workflow for recruiters and hiring managers.",
+"features": [
+"Admin authentication with protected dashboard access",
+"Create-test flow with candidate email, sector, difficulty, time limit, and question count",
+"OpenAI-powered generation of multiple-choice aptitude questions",
+"Public token-based candidate test access without requiring login",
+"Timed assessment experience with countdown timer and automatic submission on timeout",
+"Instant answer saving as candidates progress through the test",
+"AI-generated result analysis including score, strengths, weaknesses, red flags, and hiring recommendation",
+"Interviewer probe questions and sub-topic breakdowns for follow-up interviews",
+"Email-based invitation, candidate completion, and owner notification workflows",
+"Responsive product landing page for onboarding and product marketing"
+],
+"execution": "Built Aptitude Test as a full-stack recruitment product using Phoenix LiveView, designing both the employer-facing admin experience and the candidate-facing testing flow. Developed the assessment lifecycle end-to-end: authenticated admins can create a test, trigger AI-generated questions, email a secure link to a candidate, and review a structured hiring report after submission. Focused heavily on usability and reliability, including token-gated public access, persisted timing state, immediate answer saving, asynchronous result generation, and branded transactional email communication. The result was a lightweight but production-ready hiring tool that reduces screening friction while giving recruiters sharper signals before interviews.",
+"projectResults": {
+"description": "Aptitude Test launched as a live web platform that turns manual early-stage screening into a faster and more structured digital workflow. The system gives hiring teams a complete assessment pipeline from test creation to candidate completion and AI-assisted review, improving speed, consistency, and decision readiness in recruitment.",
+"metrics": [
+"Production web platform live at aptitudetest.info",
+"End-to-end workflow implemented from test creation to AI-assisted result reporting",
+"Secure token-based candidate access with no candidate login required",
+"Timed assessment experience with persisted progress and auto-submit logic",
+"AI-generated hiring reports including strengths, weaknesses, red flags, and interviewer prompts",
+"Admin dashboard available for sent, in-progress, and completed test management"
+]
+},
+"projectImages": [
+"images/new_images/aptitudetest.png"
+]
+},
+
+{
+  "id": 22,
+  "title": "ChasingSun",
+  "client": "Internal Greenhouse Operations Team / Agribusiness Operations",
+  "role": "Lead Full-Stack Developer & Operations Systems Architect",
+  "category": "Agritech / Greenhouse Operations & Yield Analytics",
+  "deliverables": [
+    "Phoenix LiveView greenhouse operations platform",
+    "Role-based operations dashboard and admin panel",
+    "Greenhouse, venture, and crop-cycle management modules",
+    "Weekly harvest recording and performance tracking flows",
+    "Forecasting, projection, and crop recommendation tools",
+    "Guest-restricted read-only dashboard access",
+    "AI-assisted pickup-note harvest capture",
+    "Farm visit tracking and operational reporting",
+    "Crop-rule, pricing, and planning configuration",
+    "Seeded operational data and legacy import support"
+  ],
+  "date": "2026",
+  "websiteLink": "",
+  "projectDescription": "This is a Phoenix LiveView greenhouse operations and crop-performance platform built to help an internal agribusiness team manage production cycles, weekly harvest tracking, and short-range output forecasting from one system. The application combines live operational visibility with role-based back-office tooling for greenhouse records, crop rules, farm visits, harvest actuals, performance analytics, and forward-looking recommendations. It is designed to centralize day-to-day greenhouse management while improving planning accuracy, reporting, and operational accountability.",
+  "features": [
+    "Live operations dashboard with greenhouse status, expected weekly output, charts, and operational notifications",
+    "Greenhouse registry with venture assignment, tank and size metadata, and active crop-cycle management",
+    "Crop-cycle planning covering crop type, variety, plant count, nursery dates, transplant dates, harvest window, and soil recovery timing",
+    "Weekly harvest record management with greenhouse-level tracking, notes, pricing per kg, and update-in-place workflow",
+    "Performance analytics comparing expected yield vs actual yield with revenue estimation",
+    "8-week forecast and next-Saturday projection tools driven by crop rules and live greenhouse data",
+    "Crop recommendation engine and daily operational recommendation refresh flows",
+    "Role-based access control for admins, operators, viewers, and guest users",
+    "Guest account restrictions with configurable page, section, and venture-level visibility",
+    "Admin tooling for crop rules, ventures, guest accounts, and in-app operational guidance",
+    "Farm visit tracking and greenhouse visit-status reporting",
+    "AI-assisted pickup-note image analysis to prefill harvest data using OpenAI"
+  ],
+  "execution": "Built as an Elixir and Phoenix LiveView application, the platform was structured around clear domain contexts for accounts, operations, harvesting, analytics, and importing. Phoenix LiveView powers both the operational dashboards and data-entry workflows, while PostgreSQL and Ecto provide transactional modeling for greenhouses, crop cycles, harvest records, and reporting data. The main challenge was turning greenhouse planning, live operations monitoring, and harvest performance tracking into one coherent system without mixing business rules into the UI. That was solved through dedicated contexts, role-aware live sessions, reusable UI components, rule-driven forecasting logic, and pub-sub updates that keep operational views current across the application.",
+  "projectResults": {
+    "description": "The platform delivers a unified greenhouse operations system that connects crop-cycle planning, weekly harvest capture, analytics, and forecasting in one application. The result is an internal control room for greenhouse teams that improves operational visibility, planning consistency, and reporting across ventures and production units.",
+    "metrics": [
+      "Unified greenhouse registry, crop-cycle planning, harvest tracking, and forecasting in one Phoenix LiveView application",
+      "Supports four user roles with permission-based access across dashboard, operations, and admin workflows",
+      "Tracks greenhouse-level production with venture grouping, cycle timing, plant counts, and crop metadata",
+      "Provides expected-vs-actual yield analysis and revenue estimation from weekly harvest records",
+      "Generates 8-week forecasts, next-Saturday projections, and crop recommendations from live operational data",
+      "Adds AI-assisted pickup-note analysis to speed up harvest entry and reduce manual data capture friction"
+    ]
+  },
+  "projectImages": [
+"images/new_images/chasing1.png",
+"images/new_images/chasing2.png",
+"images/new_images/chasing3.png",
+"images/new_images/chasing4.png"
+]
+}
+,
+
 
      {
       "id": 20,
