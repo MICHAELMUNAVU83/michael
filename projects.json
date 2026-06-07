@@ -696,7 +696,7 @@
     },
     {
       "id": 4,
-      "client": "PickleSchedule Sports Tech",
+      "client": "PickleSchedule",
       "role": "Full-Stack Developer & AI Implementation",
       "category": "Sports Technology",
       "deliverables": [
@@ -734,48 +734,6 @@
       },
       "projectImages": [
         "images/new_images/pickleschedule.png"
-      ]
-    },
-    {
-      "id": 5,
-      "client": "FoodPlan Solutions",
-      "role": "Full-Stack Web Developer",
-      "category": "Lifestyle/Health Technology",
-      "deliverables": [
-        "Meal planning web application",
-        "Recipe management system",
-        "Shopping list generator",
-        "Nutrition tracking",
-        "User dashboard",
-        "Mobile optimization"
-      ],
-      "date": "2023",
-      "websiteLink": null,
-      "projectDescription": "A comprehensive meal planning system that helps users organize their weekly meals efficiently. The application allows users to plan meals for the week, manage their recipe collection, and automatically generate smart shopping lists based on their meal plans, making healthy eating more accessible and organized.",
-      "features": [
-        "Interactive weekly meal planning calendar",
-        "Comprehensive recipe management and storage",
-        "Automatic shopping list generation from meal plans",
-        "Ingredient inventory tracking and management",
-        "Nutritional information display and analysis",
-        "Meal preparation time estimation",
-        "Dietary restriction and preference filtering",
-        "Family meal planning with portion scaling"
-      ],
-      "execution": "Built the meal planning system over 5 months working with a team of 2 developers using React and Ruby on Rails. Applied feature-driven development methodology with regular user testing sessions to ensure usability. The primary technical challenge was developing complex recipe-to-shopping-list algorithms that could intelligently consolidate ingredients and handle measurement conversions, which I solved by creating a smart ingredient consolidation system with automated measurement conversion capabilities.",
-      "projectResults": {
-        "description": "The meal planning system successfully helped users organize their eating habits and reduce food waste while saving significant time on meal preparation. The platform's smart features led to improved user health outcomes and cost savings.",
-        "metrics": [
-          "10,000+ meals successfully planned by platform users",
-          "5,000+ recipes stored and shared in the community database",
-          "Average 2 hours saved per week per user on meal planning",
-          "85% weekly active user rate showing strong engagement",
-          "40% improvement in meal consistency reported by users",
-          "25% average reduction in food waste and grocery costs"
-        ]
-      },
-      "projectImages": [
-        "images/new_images/sistes.png"
       ]
     },
   {
