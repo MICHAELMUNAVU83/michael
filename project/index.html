@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Wed Dec 04 2024 23:16:13 GMT+0000 (Coordinated Universal Time) -->
 <html
   data-wf-domain="portfolixtemplate.webflow.io"
@@ -183,8 +183,13 @@
         width: 44px;
         height: 44px;
         border-radius: 999px;
-        background:
-          radial-gradient(circle at 30% 30%, #ffe582 0%, #ffc94b 45%, #ff9f2f 78%, #ff6e45 100%);
+        background: radial-gradient(
+          circle at 30% 30%,
+          #ffe582 0%,
+          #ffc94b 45%,
+          #ff9f2f 78%,
+          #ff6e45 100%
+        );
         box-shadow:
           inset 0 1px 1px rgba(255, 255, 255, 0.45),
           0 8px 18px rgba(255, 172, 46, 0.28);
@@ -219,8 +224,13 @@
         height: 34px;
         margin-right: 0;
         border-radius: 999px;
-        background:
-          radial-gradient(circle at 30% 30%, #ffe582 0%, #ffc94b 45%, #ff9f2f 78%, #ff6e45 100%);
+        background: radial-gradient(
+          circle at 30% 30%,
+          #ffe582 0%,
+          #ffc94b 45%,
+          #ff9f2f 78%,
+          #ff6e45 100%
+        );
         box-shadow:
           inset 0 1px 1px rgba(255, 255, 255, 0.45),
           0 6px 14px rgba(255, 172, 46, 0.24);
@@ -279,10 +289,10 @@
       !(function (o, c) {
         var n = c.documentElement,
           t = " w-mod-";
-        (n.className += t + "js"),
+        ((n.className += t + "js"),
           ("ontouchstart" in o ||
             (o.DocumentTouch && c instanceof DocumentTouch)) &&
-            (n.className += t + "touch");
+            (n.className += t + "touch"));
       })(window, document);
     </script>
     <link
@@ -301,7 +311,7 @@
         script.setAttribute("data-product-id", "1");
         script.setAttribute(
           "data-api-key",
-          "cb_efbaaf046dfd0e7cd09cbdbadca7c620"
+          "cb_efbaaf046dfd0e7cd09cbdbadca7c620",
         );
         script.setAttribute("data-api-base", "https://www.app.callwisely.ai");
         document.head.appendChild(script);
@@ -498,7 +508,10 @@
                 >
                   <div class="project-hero-link-copy">
                     <div class="project-hero-link-label">Visit Website</div>
-                    <div id="project-website-hero-label" class="project-hero-link-url">
+                    <div
+                      id="project-website-hero-label"
+                      class="project-hero-link-url"
+                    >
                       Loading...
                     </div>
                   </div>
@@ -929,80 +942,7 @@
         </div>
       </footer>
     </div>
-    <div>
-      <div
-        data-w-id="65b4f744-8d31-d50a-49f4-a29fe183edd2"
-        class="brix-badges-wrapper"
-      >
-        <div
-          class="more-templates-lottie-2"
-          data-w-id="65b4f744-8d31-d50a-49f4-a29fe183edd3"
-          data-animation-type="lottie"
-          data-src="https://cdn.prod.website-files.com/5e30f06b05f79621331ddc25/65dcea068e8dfd14eaed7b6f_Notification%20Dot.json"
-          data-loop="1"
-          data-direction="1"
-          data-autoplay="1"
-          data-is-ix2-target="0"
-          data-renderer="svg"
-          data-default-duration="2.5"
-          data-duration="0"
-        ></div>
 
-        <div class="hidden-code w-embed w-script">
-          <style>
-            .more-templates-badge-wrapper {
-              transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-            }
-
-            .more-templates-badge-wrapper.active {
-              opacity: 1;
-              transform: translateY(0) scale(1);
-              z-index: 9991;
-            }
-
-            .more-templates-badge-wrapper.next {
-              opacity: 0.4;
-              transform: translateY(11px) scale(0.9);
-              z-index: 9990;
-            }
-            .more-templates-badge-wrapper.active:hover {
-              transform: translateY(-3px) scale(1.02) translateX(-3px)
-                rotate(1deg);
-            }
-          </style>
-
-          <script>
-            document.addEventListener("DOMContentLoaded", function () {
-              const cards = document.querySelectorAll(
-                ".more-templates-badge-wrapper"
-              );
-              let currentIndex = 0;
-              const ANIMATION_INTERVAL = 8000; // 8 seconds
-
-              function updateCards() {
-                cards.forEach((card, index) => {
-                  card.classList.remove("active", "next");
-
-                  if (index === currentIndex) {
-                    card.classList.add("active");
-                  } else if (index === (currentIndex + 1) % cards.length) {
-                    card.classList.add("next");
-                  }
-                });
-
-                currentIndex = (currentIndex + 1) % cards.length;
-              }
-
-              // Initial state
-              updateCards();
-
-              // Start the loop
-              setInterval(updateCards, ANIMATION_INTERVAL);
-            });
-          </script>
-        </div>
-      </div>
-    </div>
     <script
       src="js/jquery-3.5.1.min.dc5e7f18c8.js"
       type="text/javascript"
@@ -1058,7 +998,7 @@
             "gallery-image---wrapper " + size + " w-inline-block w-lightbox";
           imageWrapper.setAttribute(
             "data-w-id",
-            "fa5cec29-454a-3a43-e630-8ea83636e" + (800 + i)
+            "fa5cec29-454a-3a43-e630-8ea83636e" + (800 + i),
           );
 
           if (i % 2 !== 0) {
@@ -1198,7 +1138,7 @@
           safeSetAttribute(
             "project-featured-image",
             "src",
-            project.projectImages[0]
+            project.projectImages[0],
           );
           safeSetAttribute("project-logo", "src", project.projectImages[0]);
         }
@@ -1221,11 +1161,11 @@
         // Website link
         var websiteLinkEl = document.getElementById("project-website-link");
         var websiteLinkLabelEl = document.getElementById(
-          "project-website-link-label"
+          "project-website-link-label",
         );
         var heroWebsiteLinkEl = document.getElementById("project-website-hero");
         var heroWebsiteLabelEl = document.getElementById(
-          "project-website-hero-label"
+          "project-website-hero-label",
         );
         var noWebsiteEl = document.getElementById("no-website");
 
@@ -1247,7 +1187,7 @@
             heroWebsiteLinkEl.style.display = "flex";
             heroWebsiteLinkEl.setAttribute(
               "aria-label",
-              "Visit " + formattedWebsiteUrl
+              "Visit " + formattedWebsiteUrl,
             );
             heroWebsiteLabelEl.textContent = formattedWebsiteUrl;
           }
