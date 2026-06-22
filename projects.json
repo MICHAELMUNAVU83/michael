@@ -181,6 +181,52 @@
       ]
     },
     {
+  "id": 5,
+  "client": "GymBro",
+  "role": "Full-Stack Developer & Backend Architect",
+  "category": "AI/Fitness & Health Tech",
+  "deliverables": [
+    "AI-powered workout plan generator",
+    "Role-based athlete & trainer platform",
+    "Live workout logging system",
+    "Trainer dashboard & client management",
+    "Progress tracking & analytics",
+    "Invitation & onboarding flows"
+  ],
+  "date": "2024",
+  "websiteLink": "https://gymbro.app",
+  "projectDescription": "GymBro is a fitness coaching platform that connects athletes and trainers in one place. Athletes get AI-generated workout plans tailored to their goals, log sessions live, and track progress over time. Trainers invite clients, monitor activity, adjust programs, and review analytics from a single dashboard, making remote coaching seamless and data-driven.",
+  "features": [
+    "AI-generated, structured workout plans based on goals, experience, and equipment",
+    "Role-based authentication for athletes and trainers",
+    "Guided onboarding capturing body stats, goals, and training frequency",
+    "Live workout logging for sets, reps, weight, and rest",
+    "Bodyweight logs, check-in images, and personal record tracking",
+    "Trainer client roster with secure invitation links",
+    "Plan editing, exercise overrides, and AI regeneration for trainers",
+    "Real-time session monitoring and consistency analytics"
+  ],
+  "execution": "Built GymBro as the lead full-stack developer using Elixir and the Phoenix framework with LiveView for real-time, server-rendered interactivity. Designed an Ecto + PostgreSQL data model spanning workout programs, days, exercises, and session logs. Integrated the OpenAI API to generate structured workout plans, parsing the JSON response into a relational schema so plans stay editable and trackable. The main challenge was delivering reliable real-time workout logging and trainer monitoring without page reloads, which I solved by leaning on Phoenix LiveView and a role-based access architecture that cleanly separates athlete and trainer experiences.",
+  "projectResults": {
+    "description": "GymBro streamlined the coaching workflow for trainers and gave athletes a structured, accountable path to their fitness goals. AI-generated plans removed the manual effort of program design, while live logging and analytics kept both sides aligned on progress.",
+    "metrics": [
+      "AI workout plan generation in seconds vs. hours of manual programming",
+      "Single dashboard for trainers to manage their entire client roster",
+      "Real-time session logging with zero page reloads via LiveView",
+      "End-to-end athlete journey from onboarding to progress tracking",
+      "Secure invitation flow linking athletes to their trainers",
+      "Structured tracking of weight, check-ins, and personal records"
+    ]
+  },
+  "projectImages": [
+    "images/new_images/gymbro1.png",
+    "images/new_images/gymbro2.png",
+    "images/new_images/gymbro3.png",
+        "images/new_images/gymbro4.png"
+    
+  ]
+},
+    {
   "id": 8,
   "client": "254 Brewing Co",
   "role": "Full-Stack Developer",
@@ -327,7 +373,7 @@
 
 
      {
-      "id": 20,
+      "id": 21,
       "title": "Onguru Africa",
       "client": "Alvas Onguru",
       "role": "Portfolio Website Designer & Developer",
@@ -367,11 +413,9 @@
         ]
       },
       "projectImages": [
-        "images/new_images/onguru-hero.png",
-        "images/new_images/onguru-impact.png",
-        "images/new_images/onguru-insights.png",
-        "images/new_images/onguru-about.png",
-        "images/new_images/onguru-highlights.png"
+        "images/new_images/onguru1.png",
+        "images/new_images/onguru2.png"
+      
       ]
     },
     {
@@ -610,7 +654,7 @@
     ]
 },
     {
-      "id": 8,
+      "id": 9,
       "client": "Mwamba Rugby Football Club",
       "role": "Full-Stack Developer & CMS Architect",
       "category": "Sports/E-commerce",
