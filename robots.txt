@@ -1,0 +1,10 @@
+# https://www.michaelmunavu.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Nothing here is worth crawling
+Disallow: /css/
+Disallow: /js/
+
+Sitemap: https://www.michaelmunavu.com/sitemap.xml
