@@ -1,6 +1,59 @@
 {
   "projects": [
-   
+   {
+  "id": 7,
+  "client": "Wasomi AI",
+  "role": "Full-Stack Elixir/Phoenix Developer & AI Systems Architect",
+  "category": "EdTech / AI-Assisted Learning",
+  "deliverables": [
+    "AI study-tools engine: quizzes, flashcards, smart tests & study guides",
+    "Multi-format content ingestion pipeline (video, PDF, DOCX)",
+    "Whisper-based lecture transcription",
+    "LLM-as-judge scoring for free-text answers",
+    "Human-in-the-loop review workflow for all AI output",
+    "Paid video course platform with Paystack checkout & signed streaming",
+    "GS1 GDTI certificate issuance & public verification",
+    "Three-portal system: marketing site, learner portal, admin console"
+  ],
+  "date": "2026",
+  "websiteLink": "https://wasomi-ai.com",
+  "projectDescription": "Wasomi is a Phoenix/LiveView e-learning platform where AI turns course material into study tools automatically. Upload a lecture video or a PDF, and the platform transcribes it, extracts the text, and generates quizzes, flashcards, timed tests and study guides from it — all reviewable by an admin before a learner sees them. Around that sits a full commercial platform: pay-gated video delivery, Paystack checkout, progress tracking, and GS1 GDTI-verifiable certificates.",
+  "features": [
+    "AI study hub generating flashcards, practice questions, timed smart tests and study guides on demand, scoped to a whole module, a single lecture, or one document",
+    "Multi-format ingestion pipeline: Whisper transcription for video, poppler-based extraction for PDFs, in-memory XML parsing for DOCX — all sources merged into one prompt context",
+    "Structured generation via strict OpenAI JSON schemas, so response shape is guaranteed by the API rather than parsed out of free-form text",
+    "Assessment-quality prompt engineering: per-topic question allocation, anti-meta-question constraints, difficulty ladders, duplicate-avoidance seeding, and no-invented-facts rules",
+    "LLM-as-judge scoring of free-text answers on a calibrated 0.0–1.0 rubric, with graceful per-question degradation when a scoring call fails",
+    "Human-in-the-loop review: every AI-generated question lands as a draft and is only ever scored against once an admin publishes it",
+    "Durable generation pipeline on a dedicated Oban queue with 5 retry attempts, uniqueness guards against duplicate learner requests, and failure state only on final attempt",
+    "Generation history as a first-class audit record — status, source list, requested difficulty, question count, requesting user, and error detail per attempt",
+    "Ten swappable provider behaviours across the AI surface, each with a Mox mock, so the full pipeline is tested deterministically without a single API call",
+    "Server-enforced pay-gate with signed, expiring Cloudflare Stream playback tokens",
+    "Idempotent Paystack payments with webhook handling and a cron-driven reconciliation worker",
+    "GS1 GDTI certificates with Mod10 check digits, R2-stored branded PDFs, QR codes and public verification"
+  ],
+  "execution": "Built over roughly three months (June–September 2026) with a six-person team in Elixir/Phoenix, LiveView, PostgreSQL and Oban. The AI work was the architectural centre of gravity. With no Elixir OpenAI SDK available, I built every adapter directly against the Chat Completions and audio-transcription APIs over Req, each behind an Elixir behaviour so the whole AI surface could be mocked and tested without network calls. The hardest problems were not the API calls but everything around them: getting a model to write assessments a real learner would accept meant encoding assessment-design rules into the prompts — per-topic coverage allocation, bans on meta-questions about document formatting, plausibility constraints on distractors — and getting reliable structured output meant constraining every response to a strict JSON schema instead of parsing prose. Reliability came from treating each generation as a durable, auditable database row driven by a retrying Oban worker that only surfaces failure on its last attempt, and from a draft/publish gate ensuring no model output reaches a learner unreviewed. Source ingestion had to unify three very different formats — Whisper transcripts, poppler-extracted PDFs, and DOCX unzipped and parsed in memory — into a single scoped context, capped at 200k characters for cost and attention reasons rather than chunked.",
+  "projectResults": {
+    "description": "The AI layer turns a video-and-PDF course library into a self-service study platform without adding manual authoring work for admins, while keeping a human review gate on everything a learner sees.",
+    "metrics": [
+      "8 distinct AI capabilities, from transcription through generation to answer scoring",
+      "~1,300 lines of AI adapter code across 6 provider integrations, plus a 2,100-line assessments domain layer",
+      "10 swappable provider behaviours, all mock-backed for deterministic tests",
+      "6 dedicated Oban workers with retry, uniqueness and per-attempt failure semantics",
+      "3 source formats unified into one ingestion pipeline (video, PDF, DOCX)",
+      "48,000+ lines of application code and 25,500+ lines of tests across 217 modules"
+    ]
+  },
+  "projectImages": [
+    "images/new_images/wasomi.png",
+     "images/new_images/wasomi2.png",
+     "/images/new_images/wasomi3.png",
+     "images/new_images/wasomi4.png"
+
+
+  ]
+},
+
    
       {
       "id": 6,
@@ -139,7 +192,7 @@
   ]
 },
    {
-      "id": 7,
+      "id": 12,
       "client": "Bree AI",
       "role": "AI Developer & Frontend Engineer",
       "category": "AI/Career Development",
