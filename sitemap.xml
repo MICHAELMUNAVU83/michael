@@ -5,7 +5,7 @@
 >
   <url>
     <loc>https://www.michaelmunavu.com/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -16,41 +16,258 @@
 
   <url>
     <loc>https://www.michaelmunavu.com/about/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.michaelmunavu.com/portfolio/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.michaelmunavu.com/contact/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-06-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <!-- ================================================================
        PROJECT PAGES
-       Add one <url> block per project once each has its own real URL
-       (/projects/callwisely/ rather than /project/?id=1). Until then
-       leave this section commented out — listing query-string URLs in a
-       sitemap does more harm than good.
+       One entry per project in projects.json, in portfolio display
+       order. These are query-string URLs because /project/ is a single
+       template that reads ?id= and renders from projects.json — there
+       are no per-project directories yet. Google indexes query-string
+       URLs fine; when real slugs land (/projects/wasomi-ai/), swap the
+       <loc> values and keep everything else.
+
+       NOTE: every page currently ships
+       <link rel="canonical" href="https://michaelmunavu.com/" />,
+       which tells Google these are all duplicates of the homepage and
+       will suppress them regardless of this sitemap. Fix the canonicals
+       for these URLs to actually get indexed.
+       ================================================================ -->
 
   <url>
-    <loc>https://www.michaelmunavu.com/projects/callwisely/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://www.michaelmunavu.com/project/?id=7</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.michaelmunavu.com/images/new_images/wasomi.png</image:loc>
+      <image:title>Wasomi AI — AI-assisted e-learning platform</image:title>
+    </image:image>
   </url>
+
   <url>
-    <loc>https://www.michaelmunavu.com/projects/kabeberi/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <loc>https://www.michaelmunavu.com/project/?id=6</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.michaelmunavu.com/images/new_images/callwisely.png</image:loc>
+      <image:title>CallWisely AI — AI-powered phone agents</image:title>
+    </image:image>
   </url>
-       ================================================================ -->
+
+  <url>
+    <loc>https://www.michaelmunavu.com/project/?id=3</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.michaelmunavu.com/images/new_images/nexuscale.png</image:loc>
+      <image:title>Nexuscale AI — AI email marketing platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.michaelmunavu.com/project/?id=20</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.michaelmunavu.com/images/new_images/ghceone.png</image:loc>
+      <image:title>Medical ERP System — GHCE hospital operations platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.michaelmunavu.com/project/?id=12</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.michaelmunavu.com/images/new_images/bree.png</image:loc>
+      <image:title>Bree AI — AI CV and interview preparation platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.michaelmunavu.com/project/?id=5</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.michaelmunavu.com/images/new_images/gymbro1.png</image:loc>
+      <image:title>GymBro — AI fitness coaching platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.michaelmunavu.com/project/?id=8</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.michaelmunavu.com/images/new_images/brewing.png</image:loc>
+      <image:title>254 Brewing Co — brewery website and tour booking platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.michaelmunavu.com/project/?id=19</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.michaelmunavu.com/images/new_images/aptitudetest.png</image:loc>
+      <image:title>Aptitude Test — AI candidate assessment platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.michaelmunavu.com/project/?id=22</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.michaelmunavu.com/images/new_images/chasing1.png</image:loc>
+      <image:title>ChasingSun — greenhouse operations and yield analytics platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.michaelmunavu.com/project/?id=21</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.michaelmunavu.com/images/new_images/onguru1.png</image:loc>
+      <image:title>Onguru Africa — personal brand and strategy portfolio site</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.michaelmunavu.com/project/?id=18</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.michaelmunavu.com/images/new_images/oasistechnologies.png</image:loc>
+      <image:title>Oasis Technologies — mobile tech retail e-commerce store</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.michaelmunavu.com/project/?id=17</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.michaelmunavu.com/images/new_images/themint.png</image:loc>
+      <image:title>The Mint Liquor Store — liquor e-commerce platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.michaelmunavu.com/project/?id=16</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.michaelmunavu.com/images/new_images/kulolascloset.png</image:loc>
+      <image:title>Kulola's Closet — Kenyan fashion e-commerce platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.michaelmunavu.com/project/?id=15</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.michaelmunavu.com/images/new_images/asakekenya.png</image:loc>
+      <image:title>Tukutane Entertainment — Asake Kenya event ticketing platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.michaelmunavu.com/project/?id=1</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.michaelmunavu.com/images/new_images/sema.png</image:loc>
+      <image:title>Sema Healthcare — teletherapy platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.michaelmunavu.com/project/?id=9</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.michaelmunavu.com/images/new_images/kabeberi.png</image:loc>
+      <image:title>Mwamba Rugby Football Club — ticketing and merchandise platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.michaelmunavu.com/project/?id=2</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.michaelmunavu.com/images/new_images/raila.png</image:loc>
+      <image:title>Raila Odinga AUC campaign website</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.michaelmunavu.com/project/?id=4</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.michaelmunavu.com/images/new_images/pickleschedule.png</image:loc>
+      <image:title>PickleSchedule AI — SMS-based pickleball scheduling</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.michaelmunavu.com/project/?id=10</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.michaelmunavu.com/images/new_images/tomollo.png</image:loc>
+      <image:title>Tomollo Fashions — African-Irish fashion e-commerce</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.michaelmunavu.com/project/?id=11</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.michaelmunavu.com/images/new_images/jarian.png</image:loc>
+      <image:title>Jarian Power Limited — power management and customer portal</image:title>
+    </image:image>
+  </url>
 </urlset>
