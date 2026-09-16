@@ -53,8 +53,59 @@
 
   ]
 },
+  {
+    "id": 23,
+    "client": "Dansun Auto Care",
+    "role": "Full-Stack Elixir/Phoenix Developer",
+    "category": "E-Commerce / Automotive Retail",
+    "deliverables": [
+      "Spare-parts storefront with fitment-aware product pages",
+      "Persistent cart, promo codes & Paystack inline checkout",
+      "Real-time customer↔admin live chat over Phoenix PubSub",
+      "Admin console: orders, catalogue, customers, promotions, chat",
+      "Revenue & top-part analytics dashboard",
+      "Branded transactional email engine (order confirmations + admin alerts)",
+      "Invite-only, role-based team access",
+      "Runtime theming: admin-editable brand colour, fonts and site settings",
+      "Local-SEO layer: canonical URLs, OG/Twitter cards, AutoRepair JSON-LD"
+    ],
+    "date": "2026",
+    "websiteLink": "https://dansunauto.com",
+    "projectDescription": "Dansun Auto Care is an auto garage and spare-parts shop in Umoja I, Nairobi. I built them a Phoenix/LiveView storefront and a full admin panel that runs the business end-to-end: customers browse parts by vehicle fitment and part grade, pay with Paystack, and get a branded confirmation email; the shop manages catalogue, orders, customers, promo codes, site content, branding and live customer chat from one console — no developer in the loop for day-to-day changes.",
+    "features": [
+      "Fitment-and-grade product model: every part variant is scoped to a vehicle fitment (e.g. Toyota Premio/Allion) and a grade (OEM vs Aftermarket), so the picker answers 'will this fit my car?' before 'what does it cost?'",
+      "Persistent localStorage cart with a slide-out drawer that survives reloads and rehydrates into LiveView on mount",
+      "Server-side promo code engine — validation, percentage discount calculation, usage recording, plus per-code order and revenue reporting for the admin",
+      "Paystack inline checkout with server-side transaction initialization and verification, so an order is only confirmed against Paystack's own response, never the browser's",
+      "Real-time live chat on Phoenix PubSub with three topic scopes (visitor, admin inbox, per-session), unread tracking, open-session counts and in-chat product search so staff can quote a part mid-conversation",
+      "Branded HTML email engine built directly on the Nexus API — customer order confirmations and admin order alerts rendered from one templating layer",
+      "Analytics dashboard with revenue trends, order-status breakdown and top-selling parts rendered via Chart.js off Ecto aggregate queries",
+      "Content and branding owned by the client: DB-backed info pages, testimonials, site settings, and a Theme & Branding screen that injects primary colour and font choices as CSS variables at the root layout",
+      "Invite-only authentication with three roles (super_admin, admin, member), last-signed-in tracking and public registration deliberately disabled",
+      "Service-kit bundles composed of individual parts, priced and merchandised as a single product",
+      "SEO built for local search: per-page titles/descriptions, canonical URLs, Open Graph and Twitter cards, and AutoRepair JSON-LD carrying the shop's address, opening hours and phone number",
+      "One shared design-token system across storefront and admin, so the panel a shop owner uses looks like the shop, not like a generic CRUD tool"
+    ],
+    "execution": "Built solo in Elixir/Phoenix 1.7, LiveView 1.0, PostgreSQL and Tailwind, with Ecto contexts drawing hard lines between the storefront read models and the admin write paths. The interesting constraint was that this is a garage, not a fashion retailer: the generic product/variant schema had to carry vehicle fitment and part grade without a rewrite, and the storefront had to lead with compatibility rather than styling. Payments are verified server-side against Paystack before an order is ever marked paid. Live chat runs on Phoenix PubSub with separate visitor, admin-inbox and per-session topics so an admin watching the inbox and an admin inside a conversation each get exactly the updates they need. The hardest design call was deciding how much of the site the client should be able to change without me — the answer was almost all of it, which meant pushing copy, info pages, testimonials, promotions, brand colour and fonts into the database and out of the codebase.",
+    "projectResults": {
+      "description": "A one-garage operation now sells spare parts online and runs its entire catalogue, orders, promotions, customer conversations and site branding from a single admin panel it owns outright — no developer needed for content, pricing or theme changes.",
+      "metrics": [
+        "13 Ecto contexts covering catalogue, orders, customers, chat, promotions, content and settings",
+        "49 LiveViews and component modules across a public storefront and an 15-section admin console",
+        "3 real-time PubSub topic scopes powering customer↔admin live chat",
+        "Paystack checkout with server-verified transactions and branded confirmation emails",
+        "Role-based, invite-only access across 3 permission levels",
+        "~26,000 lines of application code across 111 modules, backed by a context-level test suite"
+      ]
+    },
+    "projectImages": [
+      "images/new_images/dansun.png",
+      "images/new_images/dansun2.png",
+      "images/new_images/dansun3.png"
+    ]
+  },
 
-   
+
       {
       "id": 6,
       "client": "CallWisely AI",
