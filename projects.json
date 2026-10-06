@@ -1,5 +1,47 @@
 {
   "projects": [
+  {
+    "id": 24,
+    "client": "Association of Turnaround & Insolvency Kenya (ATIK)",
+    "role": "Web Designer & Developer",
+    "category": "Professional Association / Corporate Website",
+    "deliverables": [
+      "Responsive professional-association website",
+      "Membership-focused information architecture",
+      "Editorial landing-page design",
+      "Event and announcement promotion",
+      "Leadership and mandate content sections",
+      "Mobile-friendly navigation and calls to action"
+    ],
+    "date": "2026",
+    "websiteLink": "https://turnaroundinsolvency.com",
+    "projectDescription": "I worked on the digital presence for the Association of Turnaround & Insolvency Kenya (ATIK), creating a polished website that introduces the association, explains its mandate and makes membership and professional-development opportunities easy to discover. The experience combines an editorial visual style with clear navigation, prominent calls to action and event-led content for Kenya's turnaround, restructuring and insolvency community.",
+    "features": [
+      "High-impact split-screen hero pairing ATIK's message with Nairobi imagery",
+      "Clear membership journey supported by prominent calls to action throughout the site",
+      "Structured sections covering the association's purpose, mandate, development work and leadership",
+      "Event promotion for industry programmes such as the Africa Round Table",
+      "Editorial typography and a restrained green-and-aqua visual system aligned with the organisation's professional character",
+      "Content layouts that combine event photography, supporting statistics and concise explanatory copy",
+      "Four-pillar presentation of ATIK's focus on enterprise, capital, people and confidence",
+      "Responsive layouts designed to keep navigation and key actions clear across screen sizes"
+    ],
+    "execution": "The website was shaped around a simple communication challenge: introduce a specialist professional body with authority while making its purpose understandable to a broad audience of practitioners, institutions and prospective members. I organised the experience around ATIK's story, mandate, membership, professional development and leadership, then used strong editorial hierarchy, generous whitespace and documentary event photography to make dense subject matter approachable. Repeated membership calls to action and visible event promotion turn the site from a static profile into a practical platform for community growth and industry engagement.",
+    "projectResults": {
+      "description": "ATIK now has a credible, focused digital showcase for its role in Kenya's developing insolvency ecosystem, with a clearer path for visitors to understand the organisation, explore its work and become members.",
+      "metrics": [
+        "6 primary navigation paths covering the organisation, mandate, membership, development, leadership and contact",
+        "4 strategic themes presented clearly: enterprise, capital, people and confidence",
+        "3 complementary visual layers combining editorial typography, Nairobi context and real event photography",
+        "A consistent membership call to action across the core browsing experience"
+      ]
+    },
+    "projectImages": [
+      "images/new_images/atik-home.jpg",
+      "images/new_images/atik-about.jpg",
+      "images/new_images/atik-mandate.jpg"
+    ]
+  },
    {
   "id": 7,
   "client": "Wasomi AI",
