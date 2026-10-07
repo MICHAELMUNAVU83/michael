@@ -1,154 +1,6 @@
 {
   "projects": [
-  {
-    "id": 24,
-    "client": "Association of Turnaround & Insolvency Kenya (ATIK)",
-    "role": "Web Designer & Developer",
-    "category": "Professional Association / Corporate Website",
-    "deliverables": [
-      "Responsive professional-association website",
-      "Membership-focused information architecture",
-      "Editorial landing-page design",
-      "Event and announcement promotion",
-      "Leadership and mandate content sections",
-      "Mobile-friendly navigation and calls to action"
-    ],
-    "date": "2026",
-    "websiteLink": "https://turnaroundinsolvency.com",
-    "projectDescription": "I worked on the digital presence for the Association of Turnaround & Insolvency Kenya (ATIK), creating a polished website that introduces the association, explains its mandate and makes membership and professional-development opportunities easy to discover. The experience combines an editorial visual style with clear navigation, prominent calls to action and event-led content for Kenya's turnaround, restructuring and insolvency community.",
-    "features": [
-      "High-impact split-screen hero pairing ATIK's message with Nairobi imagery",
-      "Clear membership journey supported by prominent calls to action throughout the site",
-      "Structured sections covering the association's purpose, mandate, development work and leadership",
-      "Event promotion for industry programmes such as the Africa Round Table",
-      "Editorial typography and a restrained green-and-aqua visual system aligned with the organisation's professional character",
-      "Content layouts that combine event photography, supporting statistics and concise explanatory copy",
-      "Four-pillar presentation of ATIK's focus on enterprise, capital, people and confidence",
-      "Responsive layouts designed to keep navigation and key actions clear across screen sizes"
-    ],
-    "execution": "The website was shaped around a simple communication challenge: introduce a specialist professional body with authority while making its purpose understandable to a broad audience of practitioners, institutions and prospective members. I organised the experience around ATIK's story, mandate, membership, professional development and leadership, then used strong editorial hierarchy, generous whitespace and documentary event photography to make dense subject matter approachable. Repeated membership calls to action and visible event promotion turn the site from a static profile into a practical platform for community growth and industry engagement.",
-    "projectResults": {
-      "description": "ATIK now has a credible, focused digital showcase for its role in Kenya's developing insolvency ecosystem, with a clearer path for visitors to understand the organisation, explore its work and become members.",
-      "metrics": [
-        "6 primary navigation paths covering the organisation, mandate, membership, development, leadership and contact",
-        "4 strategic themes presented clearly: enterprise, capital, people and confidence",
-        "3 complementary visual layers combining editorial typography, Nairobi context and real event photography",
-        "A consistent membership call to action across the core browsing experience"
-      ]
-    },
-    "projectImages": [
-      "images/new_images/atik-home.jpg",
-      "images/new_images/atik-about.jpg",
-      "images/new_images/atik-mandate.jpg"
-    ]
-  },
-   {
-  "id": 7,
-  "client": "Wasomi AI",
-  "role": "Full-Stack Elixir/Phoenix Developer & AI Systems Architect",
-  "category": "EdTech / AI-Assisted Learning",
-  "deliverables": [
-    "AI study-tools engine: quizzes, flashcards, smart tests & study guides",
-    "Multi-format content ingestion pipeline (video, PDF, DOCX)",
-    "Whisper-based lecture transcription",
-    "LLM-as-judge scoring for free-text answers",
-    "Human-in-the-loop review workflow for all AI output",
-    "Paid video course platform with Paystack checkout & signed streaming",
-    "GS1 GDTI certificate issuance & public verification",
-    "Three-portal system: marketing site, learner portal, admin console"
-  ],
-  "date": "2026",
-  "websiteLink": "https://wasomi-ai.com",
-  "projectDescription": "Wasomi is a Phoenix/LiveView e-learning platform where AI turns course material into study tools automatically. Upload a lecture video or a PDF, and the platform transcribes it, extracts the text, and generates quizzes, flashcards, timed tests and study guides from it — all reviewable by an admin before a learner sees them. Around that sits a full commercial platform: pay-gated video delivery, Paystack checkout, progress tracking, and GS1 GDTI-verifiable certificates.",
-  "features": [
-    "AI study hub generating flashcards, practice questions, timed smart tests and study guides on demand, scoped to a whole module, a single lecture, or one document",
-    "Multi-format ingestion pipeline: Whisper transcription for video, poppler-based extraction for PDFs, in-memory XML parsing for DOCX — all sources merged into one prompt context",
-    "Structured generation via strict OpenAI JSON schemas, so response shape is guaranteed by the API rather than parsed out of free-form text",
-    "Assessment-quality prompt engineering: per-topic question allocation, anti-meta-question constraints, difficulty ladders, duplicate-avoidance seeding, and no-invented-facts rules",
-    "LLM-as-judge scoring of free-text answers on a calibrated 0.0–1.0 rubric, with graceful per-question degradation when a scoring call fails",
-    "Human-in-the-loop review: every AI-generated question lands as a draft and is only ever scored against once an admin publishes it",
-    "Durable generation pipeline on a dedicated Oban queue with 5 retry attempts, uniqueness guards against duplicate learner requests, and failure state only on final attempt",
-    "Generation history as a first-class audit record — status, source list, requested difficulty, question count, requesting user, and error detail per attempt",
-    "Ten swappable provider behaviours across the AI surface, each with a Mox mock, so the full pipeline is tested deterministically without a single API call",
-    "Server-enforced pay-gate with signed, expiring Cloudflare Stream playback tokens",
-    "Idempotent Paystack payments with webhook handling and a cron-driven reconciliation worker",
-    "GS1 GDTI certificates with Mod10 check digits, R2-stored branded PDFs, QR codes and public verification"
-  ],
-  "execution": "Built over roughly three months (June–September 2026) with a six-person team in Elixir/Phoenix, LiveView, PostgreSQL and Oban. The AI work was the architectural centre of gravity. With no Elixir OpenAI SDK available, I built every adapter directly against the Chat Completions and audio-transcription APIs over Req, each behind an Elixir behaviour so the whole AI surface could be mocked and tested without network calls. The hardest problems were not the API calls but everything around them: getting a model to write assessments a real learner would accept meant encoding assessment-design rules into the prompts — per-topic coverage allocation, bans on meta-questions about document formatting, plausibility constraints on distractors — and getting reliable structured output meant constraining every response to a strict JSON schema instead of parsing prose. Reliability came from treating each generation as a durable, auditable database row driven by a retrying Oban worker that only surfaces failure on its last attempt, and from a draft/publish gate ensuring no model output reaches a learner unreviewed. Source ingestion had to unify three very different formats — Whisper transcripts, poppler-extracted PDFs, and DOCX unzipped and parsed in memory — into a single scoped context, capped at 200k characters for cost and attention reasons rather than chunked.",
-  "projectResults": {
-    "description": "The AI layer turns a video-and-PDF course library into a self-service study platform without adding manual authoring work for admins, while keeping a human review gate on everything a learner sees.",
-    "metrics": [
-      "8 distinct AI capabilities, from transcription through generation to answer scoring",
-      "~1,300 lines of AI adapter code across 6 provider integrations, plus a 2,100-line assessments domain layer",
-      "10 swappable provider behaviours, all mock-backed for deterministic tests",
-      "6 dedicated Oban workers with retry, uniqueness and per-attempt failure semantics",
-      "3 source formats unified into one ingestion pipeline (video, PDF, DOCX)",
-      "48,000+ lines of application code and 25,500+ lines of tests across 217 modules"
-    ]
-  },
-  "projectImages": [
-    "images/new_images/wasomi.png",
-     "images/new_images/wasomi2.png",
-     "/images/new_images/wasomi3.png",
-     "images/new_images/wasomi4.png"
-
-
-  ]
-},
-  {
-    "id": 23,
-    "client": "Dansun Auto Care",
-    "role": "Full-Stack Elixir/Phoenix Developer",
-    "category": "E-Commerce / Automotive Retail",
-    "deliverables": [
-      "Spare-parts storefront with fitment-aware product pages",
-      "Persistent cart, promo codes & Paystack inline checkout",
-      "Real-time customer↔admin live chat over Phoenix PubSub",
-      "Admin console: orders, catalogue, customers, promotions, chat",
-      "Revenue & top-part analytics dashboard",
-      "Branded transactional email engine (order confirmations + admin alerts)",
-      "Invite-only, role-based team access",
-      "Runtime theming: admin-editable brand colour, fonts and site settings",
-      "Local-SEO layer: canonical URLs, OG/Twitter cards, AutoRepair JSON-LD"
-    ],
-    "date": "2026",
-    "websiteLink": "https://dansunauto.com",
-    "projectDescription": "Dansun Auto Care is an auto garage and spare-parts shop in Umoja I, Nairobi. I built them a Phoenix/LiveView storefront and a full admin panel that runs the business end-to-end: customers browse parts by vehicle fitment and part grade, pay with Paystack, and get a branded confirmation email; the shop manages catalogue, orders, customers, promo codes, site content, branding and live customer chat from one console — no developer in the loop for day-to-day changes.",
-    "features": [
-      "Fitment-and-grade product model: every part variant is scoped to a vehicle fitment (e.g. Toyota Premio/Allion) and a grade (OEM vs Aftermarket), so the picker answers 'will this fit my car?' before 'what does it cost?'",
-      "Persistent localStorage cart with a slide-out drawer that survives reloads and rehydrates into LiveView on mount",
-      "Server-side promo code engine — validation, percentage discount calculation, usage recording, plus per-code order and revenue reporting for the admin",
-      "Paystack inline checkout with server-side transaction initialization and verification, so an order is only confirmed against Paystack's own response, never the browser's",
-      "Real-time live chat on Phoenix PubSub with three topic scopes (visitor, admin inbox, per-session), unread tracking, open-session counts and in-chat product search so staff can quote a part mid-conversation",
-      "Branded HTML email engine built directly on the Nexus API — customer order confirmations and admin order alerts rendered from one templating layer",
-      "Analytics dashboard with revenue trends, order-status breakdown and top-selling parts rendered via Chart.js off Ecto aggregate queries",
-      "Content and branding owned by the client: DB-backed info pages, testimonials, site settings, and a Theme & Branding screen that injects primary colour and font choices as CSS variables at the root layout",
-      "Invite-only authentication with three roles (super_admin, admin, member), last-signed-in tracking and public registration deliberately disabled",
-      "Service-kit bundles composed of individual parts, priced and merchandised as a single product",
-      "SEO built for local search: per-page titles/descriptions, canonical URLs, Open Graph and Twitter cards, and AutoRepair JSON-LD carrying the shop's address, opening hours and phone number",
-      "One shared design-token system across storefront and admin, so the panel a shop owner uses looks like the shop, not like a generic CRUD tool"
-    ],
-    "execution": "Built solo in Elixir/Phoenix 1.7, LiveView 1.0, PostgreSQL and Tailwind, with Ecto contexts drawing hard lines between the storefront read models and the admin write paths. The interesting constraint was that this is a garage, not a fashion retailer: the generic product/variant schema had to carry vehicle fitment and part grade without a rewrite, and the storefront had to lead with compatibility rather than styling. Payments are verified server-side against Paystack before an order is ever marked paid. Live chat runs on Phoenix PubSub with separate visitor, admin-inbox and per-session topics so an admin watching the inbox and an admin inside a conversation each get exactly the updates they need. The hardest design call was deciding how much of the site the client should be able to change without me — the answer was almost all of it, which meant pushing copy, info pages, testimonials, promotions, brand colour and fonts into the database and out of the codebase.",
-    "projectResults": {
-      "description": "A one-garage operation now sells spare parts online and runs its entire catalogue, orders, promotions, customer conversations and site branding from a single admin panel it owns outright — no developer needed for content, pricing or theme changes.",
-      "metrics": [
-        "13 Ecto contexts covering catalogue, orders, customers, chat, promotions, content and settings",
-        "49 LiveViews and component modules across a public storefront and an 15-section admin console",
-        "3 real-time PubSub topic scopes powering customer↔admin live chat",
-        "Paystack checkout with server-verified transactions and branded confirmation emails",
-        "Role-based, invite-only access across 3 permission levels",
-        "~26,000 lines of application code across 111 modules, backed by a context-level test suite"
-      ]
-    },
-    "projectImages": [
-      "images/new_images/dansun.png",
-      "images/new_images/dansun2.png",
-      "images/new_images/dansun3.png"
-    ]
-  },
-
-
-      {
+       {
       "id": 6,
       "client": "CallWisely AI",
       "role": "AI Integration Developer & Backend Architect",
@@ -233,8 +85,62 @@
         "images/new_images/nexuscale.png"
       ]
     },
-  
-     {
+
+   {
+  "id": 7,
+  "client": "Wasomi AI",
+  "role": "Full-Stack Elixir/Phoenix Developer & AI Systems Architect",
+  "category": "EdTech / AI-Assisted Learning",
+  "deliverables": [
+    "AI study-tools engine: quizzes, flashcards, smart tests & study guides",
+    "Multi-format content ingestion pipeline (video, PDF, DOCX)",
+    "Whisper-based lecture transcription",
+    "LLM-as-judge scoring for free-text answers",
+    "Human-in-the-loop review workflow for all AI output",
+    "Paid video course platform with Paystack checkout & signed streaming",
+    "GS1 GDTI certificate issuance & public verification",
+    "Three-portal system: marketing site, learner portal, admin console"
+  ],
+  "date": "2026",
+  "websiteLink": "https://wasomi-ai.com",
+  "projectDescription": "Wasomi is a Phoenix/LiveView e-learning platform where AI turns course material into study tools automatically. Upload a lecture video or a PDF, and the platform transcribes it, extracts the text, and generates quizzes, flashcards, timed tests and study guides from it — all reviewable by an admin before a learner sees them. Around that sits a full commercial platform: pay-gated video delivery, Paystack checkout, progress tracking, and GS1 GDTI-verifiable certificates.",
+  "features": [
+    "AI study hub generating flashcards, practice questions, timed smart tests and study guides on demand, scoped to a whole module, a single lecture, or one document",
+    "Multi-format ingestion pipeline: Whisper transcription for video, poppler-based extraction for PDFs, in-memory XML parsing for DOCX — all sources merged into one prompt context",
+    "Structured generation via strict OpenAI JSON schemas, so response shape is guaranteed by the API rather than parsed out of free-form text",
+    "Assessment-quality prompt engineering: per-topic question allocation, anti-meta-question constraints, difficulty ladders, duplicate-avoidance seeding, and no-invented-facts rules",
+    "LLM-as-judge scoring of free-text answers on a calibrated 0.0–1.0 rubric, with graceful per-question degradation when a scoring call fails",
+    "Human-in-the-loop review: every AI-generated question lands as a draft and is only ever scored against once an admin publishes it",
+    "Durable generation pipeline on a dedicated Oban queue with 5 retry attempts, uniqueness guards against duplicate learner requests, and failure state only on final attempt",
+    "Generation history as a first-class audit record — status, source list, requested difficulty, question count, requesting user, and error detail per attempt",
+    "Ten swappable provider behaviours across the AI surface, each with a Mox mock, so the full pipeline is tested deterministically without a single API call",
+    "Server-enforced pay-gate with signed, expiring Cloudflare Stream playback tokens",
+    "Idempotent Paystack payments with webhook handling and a cron-driven reconciliation worker",
+    "GS1 GDTI certificates with Mod10 check digits, R2-stored branded PDFs, QR codes and public verification"
+  ],
+  "execution": "Built over roughly three months (June–September 2026) with a six-person team in Elixir/Phoenix, LiveView, PostgreSQL and Oban. The AI work was the architectural centre of gravity. With no Elixir OpenAI SDK available, I built every adapter directly against the Chat Completions and audio-transcription APIs over Req, each behind an Elixir behaviour so the whole AI surface could be mocked and tested without network calls. The hardest problems were not the API calls but everything around them: getting a model to write assessments a real learner would accept meant encoding assessment-design rules into the prompts — per-topic coverage allocation, bans on meta-questions about document formatting, plausibility constraints on distractors — and getting reliable structured output meant constraining every response to a strict JSON schema instead of parsing prose. Reliability came from treating each generation as a durable, auditable database row driven by a retrying Oban worker that only surfaces failure on its last attempt, and from a draft/publish gate ensuring no model output reaches a learner unreviewed. Source ingestion had to unify three very different formats — Whisper transcripts, poppler-extracted PDFs, and DOCX unzipped and parsed in memory — into a single scoped context, capped at 200k characters for cost and attention reasons rather than chunked.",
+  "projectResults": {
+    "description": "The AI layer turns a video-and-PDF course library into a self-service study platform without adding manual authoring work for admins, while keeping a human review gate on everything a learner sees.",
+    "metrics": [
+      "8 distinct AI capabilities, from transcription through generation to answer scoring",
+      "~1,300 lines of AI adapter code across 6 provider integrations, plus a 2,100-line assessments domain layer",
+      "10 swappable provider behaviours, all mock-backed for deterministic tests",
+      "6 dedicated Oban workers with retry, uniqueness and per-attempt failure semantics",
+      "3 source formats unified into one ingestion pipeline (video, PDF, DOCX)",
+      "48,000+ lines of application code and 25,500+ lines of tests across 217 modules"
+    ]
+  },
+  "projectImages": [
+    "images/new_images/wasomi.png",
+     "images/new_images/wasomi2.png",
+     "/images/new_images/wasomi3.png",
+     "images/new_images/wasomi4.png"
+
+
+  ]
+},
+
+    {
   "id": 20,
   "title": "Medical ERP System",
   "client": "Glocal Healthcare Centre of Excellence (GHCE)",
@@ -284,6 +190,104 @@
     "/images/new_images/ghcetwo.png"
   ]
 },
+  {
+    "id": 23,
+    "client": "Dansun Auto Care",
+    "role": "Full-Stack Elixir/Phoenix Developer",
+    "category": "E-Commerce / Automotive Retail",
+    "deliverables": [
+      "Spare-parts storefront with fitment-aware product pages",
+      "Persistent cart, promo codes & Paystack inline checkout",
+      "Real-time customer↔admin live chat over Phoenix PubSub",
+      "Admin console: orders, catalogue, customers, promotions, chat",
+      "Revenue & top-part analytics dashboard",
+      "Branded transactional email engine (order confirmations + admin alerts)",
+      "Invite-only, role-based team access",
+      "Runtime theming: admin-editable brand colour, fonts and site settings",
+      "Local-SEO layer: canonical URLs, OG/Twitter cards, AutoRepair JSON-LD"
+    ],
+    "date": "2026",
+    "websiteLink": "https://dansunauto.com",
+    "projectDescription": "Dansun Auto Care is an auto garage and spare-parts shop in Umoja I, Nairobi. I built them a Phoenix/LiveView storefront and a full admin panel that runs the business end-to-end: customers browse parts by vehicle fitment and part grade, pay with Paystack, and get a branded confirmation email; the shop manages catalogue, orders, customers, promo codes, site content, branding and live customer chat from one console — no developer in the loop for day-to-day changes.",
+    "features": [
+      "Fitment-and-grade product model: every part variant is scoped to a vehicle fitment (e.g. Toyota Premio/Allion) and a grade (OEM vs Aftermarket), so the picker answers 'will this fit my car?' before 'what does it cost?'",
+      "Persistent localStorage cart with a slide-out drawer that survives reloads and rehydrates into LiveView on mount",
+      "Server-side promo code engine — validation, percentage discount calculation, usage recording, plus per-code order and revenue reporting for the admin",
+      "Paystack inline checkout with server-side transaction initialization and verification, so an order is only confirmed against Paystack's own response, never the browser's",
+      "Real-time live chat on Phoenix PubSub with three topic scopes (visitor, admin inbox, per-session), unread tracking, open-session counts and in-chat product search so staff can quote a part mid-conversation",
+      "Branded HTML email engine built directly on the Nexus API — customer order confirmations and admin order alerts rendered from one templating layer",
+      "Analytics dashboard with revenue trends, order-status breakdown and top-selling parts rendered via Chart.js off Ecto aggregate queries",
+      "Content and branding owned by the client: DB-backed info pages, testimonials, site settings, and a Theme & Branding screen that injects primary colour and font choices as CSS variables at the root layout",
+      "Invite-only authentication with three roles (super_admin, admin, member), last-signed-in tracking and public registration deliberately disabled",
+      "Service-kit bundles composed of individual parts, priced and merchandised as a single product",
+      "SEO built for local search: per-page titles/descriptions, canonical URLs, Open Graph and Twitter cards, and AutoRepair JSON-LD carrying the shop's address, opening hours and phone number",
+      "One shared design-token system across storefront and admin, so the panel a shop owner uses looks like the shop, not like a generic CRUD tool"
+    ],
+    "execution": "Built solo in Elixir/Phoenix 1.7, LiveView 1.0, PostgreSQL and Tailwind, with Ecto contexts drawing hard lines between the storefront read models and the admin write paths. The interesting constraint was that this is a garage, not a fashion retailer: the generic product/variant schema had to carry vehicle fitment and part grade without a rewrite, and the storefront had to lead with compatibility rather than styling. Payments are verified server-side against Paystack before an order is ever marked paid. Live chat runs on Phoenix PubSub with separate visitor, admin-inbox and per-session topics so an admin watching the inbox and an admin inside a conversation each get exactly the updates they need. The hardest design call was deciding how much of the site the client should be able to change without me — the answer was almost all of it, which meant pushing copy, info pages, testimonials, promotions, brand colour and fonts into the database and out of the codebase.",
+    "projectResults": {
+      "description": "A one-garage operation now sells spare parts online and runs its entire catalogue, orders, promotions, customer conversations and site branding from a single admin panel it owns outright — no developer needed for content, pricing or theme changes.",
+      "metrics": [
+        "13 Ecto contexts covering catalogue, orders, customers, chat, promotions, content and settings",
+        "49 LiveViews and component modules across a public storefront and an 15-section admin console",
+        "3 real-time PubSub topic scopes powering customer↔admin live chat",
+        "Paystack checkout with server-verified transactions and branded confirmation emails",
+        "Role-based, invite-only access across 3 permission levels",
+        "~26,000 lines of application code across 111 modules, backed by a context-level test suite"
+      ]
+    },
+    "projectImages": [
+      "images/new_images/dansun.png",
+      "images/new_images/dansun2.png",
+      "images/new_images/dansun3.png"
+    ]
+  },
+
+    {
+    "id": 24,
+    "client": "Association of Turnaround & Insolvency Kenya (ATIK)",
+    "role": "Web Designer & Developer",
+    "category": "Professional Association / Corporate Website",
+    "deliverables": [
+      "Responsive professional-association website",
+      "Membership-focused information architecture",
+      "Editorial landing-page design",
+      "Event and announcement promotion",
+      "Leadership and mandate content sections",
+      "Mobile-friendly navigation and calls to action"
+    ],
+    "date": "2026",
+    "websiteLink": "https://turnaroundinsolvency.com",
+    "projectDescription": "I worked on the digital presence for the Association of Turnaround & Insolvency Kenya (ATIK), creating a polished website that introduces the association, explains its mandate and makes membership and professional-development opportunities easy to discover. The experience combines an editorial visual style with clear navigation, prominent calls to action and event-led content for Kenya's turnaround, restructuring and insolvency community.",
+    "features": [
+      "High-impact split-screen hero pairing ATIK's message with Nairobi imagery",
+      "Clear membership journey supported by prominent calls to action throughout the site",
+      "Structured sections covering the association's purpose, mandate, development work and leadership",
+      "Event promotion for industry programmes such as the Africa Round Table",
+      "Editorial typography and a restrained green-and-aqua visual system aligned with the organisation's professional character",
+      "Content layouts that combine event photography, supporting statistics and concise explanatory copy",
+      "Four-pillar presentation of ATIK's focus on enterprise, capital, people and confidence",
+      "Responsive layouts designed to keep navigation and key actions clear across screen sizes"
+    ],
+    "execution": "The website was shaped around a simple communication challenge: introduce a specialist professional body with authority while making its purpose understandable to a broad audience of practitioners, institutions and prospective members. I organised the experience around ATIK's story, mandate, membership, professional development and leadership, then used strong editorial hierarchy, generous whitespace and documentary event photography to make dense subject matter approachable. Repeated membership calls to action and visible event promotion turn the site from a static profile into a practical platform for community growth and industry engagement.",
+    "projectResults": {
+      "description": "ATIK now has a credible, focused digital showcase for its role in Kenya's developing insolvency ecosystem, with a clearer path for visitors to understand the organisation, explore its work and become members.",
+      "metrics": [
+        "6 primary navigation paths covering the organisation, mandate, membership, development, leadership and contact",
+        "4 strategic themes presented clearly: enterprise, capital, people and confidence",
+        "3 complementary visual layers combining editorial typography, Nairobi context and real event photography",
+        "A consistent membership call to action across the core browsing experience"
+      ]
+    },
+    "projectImages": [
+      "images/new_images/atik-home.jpg",
+      "images/new_images/atik-about.jpg",
+      "images/new_images/atik-mandate.jpg"
+    ]
+  },
+
+   
+  
+ 
    {
       "id": 12,
       "client": "Bree AI",
