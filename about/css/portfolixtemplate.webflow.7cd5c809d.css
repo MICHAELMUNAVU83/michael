@@ -10737,6 +10737,12 @@ figure {
   max-height: 48px;
 }
 
+.resume-icon .image {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
 .resume-card---content-wrapper {
   width: 100%;
 }
@@ -10747,6 +10753,11 @@ figure {
   justify-content: space-between;
   align-items: flex-start;
   display: flex;
+}
+
+.resume-card---details-wrapper > .badge {
+  flex: none;
+  white-space: nowrap;
 }
 
 .resume-card---details-wrapper.center {
