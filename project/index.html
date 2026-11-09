@@ -1285,7 +1285,7 @@ on a journey to build systems that solve real-world problems and create meaningf
             var project = null;
             for (var i = 0; i < data.projects.length; i++) {
               var p = data.projects[i];
-              if (String(p.id) === projectId) {
+              if (String(p.id) === projectId || p.slug === projectId) {
                 project = p;
                 break;
               }

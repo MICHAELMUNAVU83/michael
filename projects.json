@@ -1,5 +1,51 @@
 {
   "projects": [
+    {
+      "id": 25,
+      "slug": "irish-chamber-of-commerce-kenya",
+      "client": "Irish Chamber of Commerce Kenya",
+      "role": "Web Designer & Developer",
+      "category": "Business Association / Corporate Website",
+      "deliverables": [
+        "Responsive corporate website",
+        "Membership-focused information architecture",
+        "Business gateway and market-opportunity content",
+        "Events and member-community presentation",
+        "Ireland–Kenya trade storytelling",
+        "Mobile-friendly navigation and calls to action"
+      ],
+      "date": "2026",
+      "websiteLink": "https://irishchamber.co.ke",
+      "projectDescription": "I designed and developed the website for the Irish Chamber of Commerce Kenya, creating a polished digital home for the organisation connecting businesses, entrepreneurs and institutions across Ireland and Kenya. The experience makes the Chamber's purpose, membership benefits, events, community and business opportunities easy to discover through clear storytelling and confident calls to action.",
+      "features": [
+        "Editorial homepage introducing the Ireland–Kenya business network and the Chamber's mission",
+        "Membership journey highlighting networking, visibility, market insight, events and shared advocacy",
+        "Business Gateway content presenting trade and investment opportunities across both markets",
+        "Events and member sections designed for quick discovery and ongoing community engagement",
+        "Partner, founding-member and sponsor presentation that reinforces the Chamber's credibility",
+        "Responsive navigation with prominent contact and membership calls to action",
+        "Purpose-led About content supported by authentic Chamber event photography",
+        "Consistent visual system inspired by the Chamber's green brand palette and clover identity"
+      ],
+      "execution": "The website was shaped around the Chamber's role as a bridge between two business communities. I translated that positioning into a clear content hierarchy: establish the Ireland–Kenya connection, explain the commercial opportunity, show the value of membership and introduce the people and organisations behind the network. The design combines a restrained green-and-neutral palette, large editorial typography, immersive photography and rounded interface elements to make a formal business organisation feel established, welcoming and contemporary. Responsive layouts keep navigation, membership benefits and calls to action clear across screen sizes.",
+      "projectResults": {
+        "description": "The completed site gives the Irish Chamber of Commerce Kenya a credible, modern platform for communicating its purpose, growing membership and showcasing the commercial relationship between Ireland and Kenya.",
+        "metrics": [
+          "One unified digital presence for membership, events, members and business-gateway content",
+          "Six clearly communicated membership benefits in a focused conversion section",
+          "Dual-market storytelling connecting Nairobi and Dublin within one visual experience",
+          "Prominent contact and membership calls to action throughout the visitor journey",
+          "Responsive layouts designed for desktop, tablet and mobile visitors",
+          "Partner and member visibility integrated into the core site experience"
+        ]
+      },
+      "projectImages": [
+        "images/new_images/irish-chamber-kenya-home.webp",
+        "images/new_images/irish-chamber-kenya-opportunity.webp",
+        "images/new_images/irish-chamber-kenya-membership.webp",
+        "images/new_images/irish-chamber-kenya-purpose.webp"
+      ]
+    },
        {
       "id": 6,
       "client": "CallWisely AI",
